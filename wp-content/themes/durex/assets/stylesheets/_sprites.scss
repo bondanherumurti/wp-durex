@@ -1,0 +1,150 @@
+.sprites {
+	background: url("assets/images/icon.png");
+
+	&.fb-small {
+		background-position: -4px -1px;
+		width: 9px;
+		height: 20px;
+	}
+	&.twitter-small {
+		background-position: -18px -3px;
+		width: 19px;
+		height: 16px;
+	}
+	&.instagram-small {
+		background-position: -41px -2px;
+		width: 19px;
+		height: 19px;
+	}
+	&.youtube-small {
+		background-position: -64px -1px;
+		width: 19px;
+		height: 22px;
+	}
+	&.search {
+		background-position: -5px -24px;
+		width: 16px;
+		height: 16px;
+	}
+	&.more {
+		background-position: -41px -76px;
+		width: 55px;
+		height: 55px;
+		&.center {
+			margin-left: 40%;
+		}
+	}
+	&.more-smaller {
+		background-position: -90px -1px;
+		width: 34px;
+		height: 34px;
+	}
+	&.logo-campaign {
+		background-position: -133px -104px;
+		width: 143px;
+		height: 20px;
+	}
+	&.partners {
+		background-position: -133px -126px;
+		width: 143px;
+		height: 38px;
+		margin-bottom: 20px;
+	}
+	&.fb-share {
+		background-position: -13px -198px;
+		width: 122px;
+		height: 46px;
+		margin: 0 auto;
+	}
+	&.twitter-share {
+		background-position: -146px -226px;
+		width: 133px;
+		height: 46px;
+		margin: 0 auto;
+	}
+	&.google-share {
+		background-position: -162px -175px;
+		width: 118px;
+		height: 46px;
+		margin: 0 auto;
+	}
+	&.home {
+		background-position: -105px -104px;
+		width: 18px;
+		height: 16px;
+	}
+	&.big-twitter {
+		background-position: -124px -295px;
+		width: 80px;
+		height: 65px;
+		margin-top: 60%;
+	}
+	&.big-facebook {
+		background-position: -4px -284px;
+		width: 38px;
+		height: 84px;
+		margin-top: 55%;
+	}
+	&.big-youtube {
+		background-position: -54px -292px;
+		width: 57px;
+		height: 68px;
+		margin-top:60%;
+	}	&.badges {
+		position: absolute;
+		&.youtube {
+			background-position: -119px -39px;
+			width: 58px;
+			height: 58px;
+			bottom: -1px;
+			left: 5px;
+		}
+		&.twitter {
+			background-position: -129px -1px;
+			width: 32px;
+			height: 32px;
+			top: 45%;
+			left: 2px; 
+			&.second {
+				top: 23px;
+			}
+			&.right {
+				left: 96%;
+			}
+		}
+		&.instagram {
+			background-position: -1px -76px;
+			width: 33px;
+			height: 33px;
+			bottom: 2px;
+			left: 18px;
+		}
+		&.facebook {
+			background-position: 0px -114px;
+			width: 33px;
+			height: 33px;
+			bottom: 2px;
+			left: 2px;
+		}
+	}
+}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.sprites {
+		&.more {
+			&.center {
+				margin-top: 15%;
+			}
+		}
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }

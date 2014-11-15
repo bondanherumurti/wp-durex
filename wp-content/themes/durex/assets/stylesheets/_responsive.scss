@@ -1,0 +1,258 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+
+	#ayo_terlibat {
+		ul.share {
+			display: inline-block;
+			margin-top: 0;
+			li {
+				float: left;
+				margin-right: 20px;
+			}
+		}
+		.bg-purple {
+			padding-bottom: 0px;
+			.container-block {
+				padding-top: 25px;
+			}
+		}
+	}
+
+	#menurut_kamu {
+		.middle-section {
+			.sprites.badges.youtube, .sprites.badges.instagram {
+				left: -1px;
+			}
+		}
+	}
+
+	#pengetahuan {
+		.bg-knowledge-pink, .bg-knowledge-image, .bg-purple, .bg-green  {
+			padding-bottom: 0;
+			padding-top: 0;
+
+			h3 {
+				padding-top: 35px;
+				margin-top: 0;
+			}
+		}
+	}
+	#inner {
+		.someone-like-me {
+			min-height: 242px;
+		}
+
+		.content {
+			p {
+				margin-top: 17px;
+				line-height: 24px;
+			}
+		}
+	}
+
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.footer-section {
+		margin-top: -40px;
+		padding-top: 120px;
+	}
+	.bg-tongue {
+		padding-bottom: 18px;
+	}
+	.col-xs-12 {
+		&.menu {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+	}
+	.middle-section {
+		.col-sm-6.right {
+			padding-right: 0px;
+		}
+
+		.col-sm-6.left {
+			padding-left: 0px;
+		}
+	}
+	.border-search {
+		padding-bottom: 19px !important;
+		border-left: solid 1px #dde2e4;
+	}
+	h1 {
+		font-size: 70px;
+		margin-top: 10px;
+	}
+	h4 {
+		font-size: 21px;
+		line-height: 30px;
+	}
+	h3 {
+		font-size: 28px;
+	}
+	.topper {
+		margin-top: -90px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	#ayo_terlibat {
+		.blok {
+			p {
+				line-height: 30px;
+				font-size: 22px;
+
+				&.follow {
+					margin-top: 50px;
+					font-size: 17px;
+				}
+			}
+		}
+	}
+	#inner {
+		.middle-section {
+			margin-top: -148px;
+		}
+		.content {
+			p {
+				margin-top: 20px;
+				line-height: 34px;
+			}
+		}
+	}
+	.youtube-height {
+		height: 343px;
+	}
+	.bg-knowledge {
+		h5 {
+			padding-top: 20px;
+		}
+		p {
+			margin-top: 20px;
+		}
+	}
+	p.bigger {
+		font-size: 25px;
+	}
+	h3 {
+		&.white-text {
+			color: white;
+			font-size: 38px;
+			margin-top: 0px;
+			padding-top: 20px;
+		}
+	}
+
+	.top-section {
+		height: 591px;
+	}
+
+	#privacy {
+		.top-section {
+			height: 435px;
+		}
+	}
+	.bg-tongue {
+		padding-bottom: 49px;
+		padding-top: 20px;
+
+		p {
+			font-size: 15px;
+			line-height: 24px;
+		}
+	}
+	.bg-purple {
+		padding-bottom: 20px;
+		padding-top: 10px;
+		p {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 17px;
+		}
+	}
+
+	#menurut_kamu {
+		.filter {
+			ul {
+				list-style: none;
+				padding: 0;
+				margin-top: 0px;
+				li {
+					float: left;
+					background: none;
+					margin: 0;
+					margin-top: 5px;
+					&:first-child {
+						padding-bottom: 15px;
+						margin-right: 30px;
+					}
+					a {
+						background: #7208a0;
+						padding: 17px 40px;
+						margin: 2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	#menurut_kamu {
+		.filter {
+			ul {
+				li {
+					a {
+						padding: 17px 50px;
+					}
+				}
+			}
+		}
+		.top-section {
+			h1 {
+				margin-top: 40px;
+			}
+		}
+	}
+	.youtube-height {
+		height: 402px;
+	}  
+	.bg-purple {
+		padding-bottom: 60px;
+		padding-top: 50px;
+		p {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 17px;
+		}
+	}
+	h3 {
+		&.white-text {
+			padding-bottom: 20px;
+		}
+	}
+	.bg-tongue {
+		h3 {
+			padding-bottom: 20px;
+			padding-top: 15px;
+		}
+
+		p {
+			line-height: 30px;
+		}
+	}
+	#inner {
+		.content {
+			p {
+				margin-top: 30px;
+				line-height: 30px;
+			}
+		}
+	}
+}
