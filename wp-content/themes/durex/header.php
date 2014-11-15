@@ -31,6 +31,14 @@
 	<?php
 		} 
 	?>
+
+	<?php
+		if(is_single()){
+	?>
+			<body id='inner'>
+	<?php
+		} 
+	?>
 	
 	<div class='container-fluid'>
 	  <div class='top-section'>
