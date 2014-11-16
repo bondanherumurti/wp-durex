@@ -19,3 +19,47 @@ function enqueue_theme_scripts(){
  //    }
 }
 add_action( 'wp_footer', 'enqueue_theme_scripts' );
+
+function set_class($image, $color){
+	switch ($color) {
+	    case "pink":
+	        $rgb = "rgba(237, 44, 100, 1), rgba(237, 44, 100, 0.8)";
+	        if($image){
+				return "<div class='container-block bg-knowledge-pink image eqheight' style='background: linear-gradient(".$rgb."), url(".$image."); background-size: 100% 100%;'>";
+			} else {
+				return "<div class='container-block bg-knowledge-pink image eqheight'>";
+			}
+	        break;
+	    case "green":
+	        $rgb = "rgba(90, 218, 177, 0.8), rgba(90, 218, 177, 0.8)";
+	        if($image){
+				return "<div class='col-sm-4 bg-knowledge-image eqheight' style='background: linear-gradient(".$rgb."), url(".$image."); background-size: 100% 100%;'>";
+			} else {
+				return "<div class='col-sm-4 bg-knowledge-image eqheight'>";
+			}
+	        break;
+	    case "green-topper":
+	        $rgb = "rgba(90, 218, 177, 0.8), rgba(90, 218, 177, 0.8)";
+	        if($image){
+				return "<div class='col-sm-4 topper bg-knowledge-image' style='background: linear-gradient(".$rgb."), url(".$image."); background-size: 100% 100%;'>";
+			} else {
+				return "<div class='col-sm-4 topper bg-knowledge-image'>";
+			}
+	        break;
+	    case "featured":
+	        $rgb = "rgba(60, 3, 110, 0.8), rgba(60, 3, 110, 0.8)";
+	        if($image){
+				return "<div class='col-sm-8 featured' style='background: linear-gradient(".$rgb."), url(".$image."); background-size: 100%;'>";
+			} else {
+				return "<div class='col-sm-8 featured'>";
+			}
+	        break;
+	    case "purple":
+	        $rgb = "rgba(60, 3, 110, 0.8), rgba(60, 3, 110, 0.8)";
+	        if($image){
+				return "<div class='container-block bg-purple image eqheight' style='background: linear-gradient(".$rgb."), url(".$image."); background-size: 100% 100%;'>";
+			} else {
+				return "<div class='container-block bg-purple image eqheight'>";
+			}
+	}
+}

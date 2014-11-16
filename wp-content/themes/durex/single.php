@@ -1,9 +1,4 @@
 <?php get_header(); ?>
-<?php
-  // Get the URL of this category
-  $category_link = get_category_link( the_category_ID($echo=false) );
-?>
-
 			      <?php get_template_part('breadcrumb'); ?>
             <div class='row'>
               <div class='col-md-8 someone-like-me col-sm-7'>

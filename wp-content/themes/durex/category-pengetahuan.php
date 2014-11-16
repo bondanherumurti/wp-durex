@@ -87,28 +87,34 @@ get_header(); ?>
       	<? foreach ($posts_featured as $post_featured):?>
       	<?php
       		$feat_image = wp_get_attachment_url(get_post_thumbnail_id($post_featured->ID));
+          echo set_class($feat_image, "featured");
       	?>
-	      	<div class='col-sm-8 featured' style='background: url(<?php echo $feat_image; ?>); background-size: 100% 100%;'>
 	          <div class='container-block'>
-	            <h3><?php echo $post_featured->post_title; ?></h3>
+	            <a href="<?php echo get_permalink($post_featured->ID); ?>"><h3><?php echo $post_featured->post_title; ?></h3></a>
 	            <div class='line pink'></div>
 	            <p><?php echo $post_featured->post_excerpt; ?></p>
 	          </div>
 	        </div> 
         <? endforeach; ?>
         <?php //dd($posts_one_grid); ?>
-        <div class='col-sm-4 topper bg-knowledge-image'>
+        <?php
+          $bg_image = wp_get_attachment_url(get_post_thumbnail_id($posts_one_grid[0]->ID));
+          echo set_class($bg_image, "green-topper");
+        ?>
           <div class='container-block'>
-            <h3><?php print $posts_one_grid[0]->post_title;?></h3>
+            <a href="<?php echo get_permalink($posts_one_grid[0]->ID); ?>"><h3><?php print $posts_one_grid[0]->post_title;?></h3></a>
             <div class='line white-line'></div>
             <p><?php print $posts_one_grid[0]->post_excerpt;?></p>
           </div>
         </div>
       </div>
       <div class='row'>
-        <div class='col-sm-4 bg-knowledge-image eqheight'>
+        <?php
+          $bg_image_1 = wp_get_attachment_url(get_post_thumbnail_id($posts_one_grid[1]->ID));
+          echo set_class($bg_image, "green");
+        ?>
           <div class='container-block'>
-            <h3><?php print $posts_one_grid[1]->post_title;?></h3>
+            <a href="<?php echo get_permalink($posts_one_grid[1]->ID); ?>"><h3><?php print $posts_one_grid[1]->post_title;?></h3></a>
             <div class='line white-line'></div>
             <p><?php print $posts_one_grid[1]->post_excerpt;?></p>
           </div>
@@ -118,7 +124,7 @@ get_header(); ?>
           <div class='row'>
             <div class='col-sm-6 right'>
               <div class='container-block bg-knowledge-pink eqheight'>
-                <h3><?php echo $posts_double_grid[0]->post_title; ?></h3>
+                <a href="<?php echo get_permalink($posts_double_grid[0]->ID); ?>"><h3><?php echo $posts_double_grid[0]->post_title; ?></h3></a>
                 <div class='line white-line'></div>
                 <p><?php echo $posts_double_grid[0]->post_excerpt; ?></p>
                 <div class='arrow-right hidden-xs'></div>
@@ -136,7 +142,7 @@ get_header(); ?>
           <div class='row'>
             <div class='col-sm-12'>
               <div class='container-block bg-purple eqheight'>
-                <h3><?php echo $posts_double_grid[1]->post_title; ?></h3>
+                <a href="<?php echo get_permalink($posts_double_grid[1]->ID); ?>"><h3><?php echo $posts_double_grid[1]->post_title; ?></h3></a>
                 <div class='line white-line'></div>
                 <p><?php echo $posts_double_grid[1]->post_excerpt; ?></p>
                 <div class='arrow-down hidden-xs'></div>
@@ -155,7 +161,7 @@ get_header(); ?>
             </div>
             <div class='col-sm-6 left'>
               <div class='container-block bg-green eqheight'>
-                <h3><?php echo $posts_double_grid[2]->post_title; ?></h3>
+                <a href="<?php echo get_permalink($posts_double_grid[2]->ID); ?>"><h3><?php echo $posts_double_grid[2]->post_title; ?></h3></a>
                 <div class='line white-line'></div>
                 <p><?php echo $posts_double_grid[2]->post_excerpt; ?></p>
                 <div class='arrow-left hidden-xs'></div>
@@ -164,15 +170,17 @@ get_header(); ?>
           </div>
           <div class='row'>
             <div class='col-sm-6 right'>
-              <div class='container-block bg-purple image eqheight'>
-                <h3><?php print $posts_one_grid[2]->post_title;?></h3>
+              <?php $bg_image_3 = wp_get_attachment_url(get_post_thumbnail_id($posts_one_grid[2]->ID));?>
+              <?php echo set_class($bg_image_3, 'purple'); ?>
+                <a href="<?php echo get_permalink($posts_one_grid[2]->ID); ?>"><h3><?php print $posts_one_grid[2]->post_title;?></h3></a>
                 <div class='line white-line'></div>
                 <p><?php print $posts_one_grid[2]->post_excerpt;?></p>
               </div>
             </div>
             <div class='col-sm-6 left'>
-              <div class='container-block bg-knowledge-pink image eqheight'>
-                <h3><?php print $posts_one_grid[3]->post_title;?></h3>
+              <?php $bg_image_4 = wp_get_attachment_url(get_post_thumbnail_id($posts_one_grid[3]->ID));?>
+              <?php echo set_class($bg_image_4, 'pink'); ?>
+                <a href="<?php echo get_permalink($posts_one_grid[3]->ID); ?>"><h3><?php print $posts_one_grid[3]->post_title;?></h3></a>
                 <div class='line white-line'></div>
                 <p><?php print $posts_one_grid[3]->post_excerpt;?></p>
               </div>

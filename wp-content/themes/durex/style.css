@@ -5975,6 +5975,9 @@ ul.file-under {
     color: #fff; }
   #pengetahuan .bg-purple p {
     font-size: 15px; }
+#pengetahuan .middle-section a:hover {
+  text-decoration: none;
+}
 
 #menurut_kamu .top-section {
   background: url("assets/images/bg-menurut-kamu.jpg");
@@ -6115,7 +6118,7 @@ ul.file-under {
     border-left: solid 1px #dde2e4; }
 
   h1 {
-    font-size: 70px;
+    font-size: 65px;
     margin-top: 10px; }
 
   h4 {
