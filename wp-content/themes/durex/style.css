@@ -6042,6 +6042,9 @@ ul.file-under {
     width: 30%; }
 #ayo_terlibat .someone-like-me {
   margin-top: 127px; }
+#ayo_terlibat .blok a:hover {
+  text-decoration: none;
+} 
 #ayo_terlibat .blok p {
   color: white;
   line-height: 22px;
