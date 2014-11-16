@@ -37,7 +37,7 @@ Template Name: Visi Page
         <div class='container'>
           <div class='row'>
             <div class='col-sm-8'>
-              <iframe allowfullscreen='' class='youtube-height' frameborder='0' src='http://www.youtube.com/embed/2y8APzvLFH4' width='100%'></iframe>
+              <iframe allowfullscreen='' class='youtube-height' frameborder='0' src='<?php the_field('youtube_video')?>' width='100%'></iframe>
             </div>
             <div class='col-sm-4'>
               <div class='bg-purple container-block text-center spread-height'>
