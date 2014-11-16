@@ -9,5 +9,12 @@ wp-content/backups/
 wp-content/blogs.dir/
 wp-content/cache/
 wp-content/upgrade/
-wp-content/uploads/
 wp-content/wp-cache-config.php
+wp-content/languages/admin-en_GB.mo
+wp-content/languages/admin-en_GB.po
+wp-content/languages/admin-network-en_GB.mo
+wp-content/languages/admin-network-en_GB.po
+wp-content/languages/continents-cities-en_GB.mo
+wp-content/languages/continents-cities-en_GB.po
+wp-content/languages/en_GB.mo
+wp-content/languages/en_GB.po

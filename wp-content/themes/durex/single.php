@@ -1,18 +1,5 @@
 <?php get_header(); ?>
-			<div class='row'>
-              <div class='col-xs-12'>
-                <ol class='breadcrumb'>
-                  <li>
-                    <a href='#'>
-                      <div class='sprites home'></div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'><?php echo get_the_category()[0]->name; ?></a>
-                  </li>
-                </ol>
-              </div>
-            </div>
+			      <?php get_template_part('breadcrumb'); ?>
             <div class='row'>
               <div class='col-md-8 someone-like-me col-sm-7'>
                 <div class='container-block'>
@@ -46,37 +33,7 @@
             </div>
             <?php get_template_part( 'single', 'sidebar' ); ?>
           </div>
-          <div class='row'>
-            <div class='col-sm-4'>
-              <div class='container-block'>
-                <h5>Related Post</h5>
-                <div class='line green' style='margin-bottom: 25px;'></div>
-              </div>
-            </div>
-          </div>
-          <div class='row related-post'>
-            <div class='col-sm-4'>
-              <div class='white container-block'>
-                <h3>Does everyone think about sex in the same way?</h3>
-                <div class='line green'></div>
-                <p>Lorem ipsum dolor sit amet, consectetur. Duis porta eros at nisl vehicula.</p>
-              </div>
-            </div>
-            <div class='col-sm-4'>
-              <div class='blue-sky container-block'>
-                <h3>How much do you really know about sex?</h3>
-                <div class='line green'></div>
-                <p>Lorem ipsum dolor sit amet, consectetur. Duis porta eros at nisl vehicula.</p>
-              </div>
-            </div>
-            <div class='col-sm-4'>
-              <div class='white container-block'>
-                <h3>Chlamydia: The Stealthy STI</h3>
-                <div class='line green'></div>
-                <p>Lorem ipsum dolor sit amet, consectetur. Duis porta eros at nisl vehicula.</p>
-              </div>
-            </div>
-          </div>
+          <?php get_template_part('single', 'related'); ?>
         </div>
       </div>
 
