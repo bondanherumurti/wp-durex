@@ -20,8 +20,7 @@ function enqueue_theme_scripts(){
 }
 add_action( 'wp_footer', 'enqueue_theme_scripts' );
 
-function load_hashtag_instagram(){
-	$instagramClientID = '9110e8c268384cb79901a96e3a16f588';
+function load_hashtag_instagram($limit){
 
 	$api = 'https://api.instagram.com/v1/tags/belsbee/media/recent?client_id=d5f3ef48b54d4bcc814723ea773f82e0'; //api request (edit this to reflect tags)
 	$cache = './ig-cache.json';
@@ -44,7 +43,7 @@ function load_hashtag_instagram(){
 	}
 
 	$return = json_decode($result,true);
-	return array_slice($return['data'], 0, 4);
+	return $limit != -1 ? array_slice($return['data'], 0, $limit) : $return['data'];
 }
 
 
@@ -139,10 +138,70 @@ function set_body_id() {
 	if ( is_page_template( 'durex.php' ) ) {
 		return ;
 	}
+	if ( is_page_template( 'menurut-kamu.php' ) ) {
+		return "menurut_kamu";
+	}
 	if(is_page()){
 		return "page";
 	} 
 	if(is_single()){
 		return "inner";
 	} 
+}
+
+function mix_video_blog_instagram(){
+	$result = array();
+	$args = array(
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'post_format',
+          'field'    => 'slug',
+          'terms'    => 'post-format-video',
+          'order' => 'DESC',
+        )
+      )
+    );
+	
+	$post_blogs = get_posts(array(
+		'category_name' => 'blogs',
+		'orderby' => 'post_date',
+		'order' => 'DESC',
+		)
+	);
+	$instagram_contents = load_hashtag_instagram(-1);
+
+
+	// d($instagram_contents);
+	// d($post_blogs);
+	$post_video = get_posts($args);
+	//sorting timestamp
+	foreach($post_video as $post){
+		$container = array();
+		$container['date_created'] = strtotime($post->post_date);
+		$container['title'] = $post -> post_title;
+		$container['body'] = $post -> post_content;
+		$container['type'] = 'video';
+		$result[strtotime($post->post_date)] = $container;
+	}
+
+	foreach($post_blogs as $post){
+		$container = array();
+		$container['date_created'] = strtotime($post->post_date);
+		$container['title'] = $post -> post_title;
+		$container['body'] = $post -> post_content;
+		$container['type'] = 'blog';
+		$result[strtotime($post->post_date)] = $container;
+	}
+
+	foreach ($instagram_contents as $content) {
+			$container = array();
+			$container['date_created'] = $content['created_time'];
+			$container['title'] = $content['caption'];
+			$container['body'] = $content['images']['standard_resolution'];
+			$container['type'] = 'instagram';
+			$result[$content['created_time']] = $container;
+	}
+	krsort($result);
+	//dd($result);
+	return $result;
 }
