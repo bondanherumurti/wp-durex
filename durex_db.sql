@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Nov 16, 2014 at 09:15 AM
+-- Generation Time: Nov 16, 2014 at 10:19 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.5.10
 
@@ -279,7 +279,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=284 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=365 ;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -423,7 +423,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (191, 16, '_thumbnail_id', '62'),
 (193, 12, '_thumbnail_id', '62'),
 (195, 64, '_edit_last', '1'),
-(196, 64, '_edit_lock', '1416125292:1'),
+(196, 64, '_edit_lock', '1416128750:1'),
 (197, 64, '_wp_page_template', 'share.php'),
 (198, 69, '_edit_last', '1'),
 (199, 69, 'field_5468590b64bf2', 'a:8:{s:3:"key";s:19:"field_5468590b64bf2";s:5:"label";s:5:"Intro";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}'),
@@ -432,19 +432,19 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (202, 69, 'field_546859b364bf5', 'a:8:{s:3:"key";s:19:"field_546859b364bf5";s:5:"label";s:7:"Twitter";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}'),
 (203, 69, 'field_546859c064bf6', 'a:14:{s:3:"key";s:19:"field_546859c064bf6";s:5:"label";s:5:"Intro";s:4:"name";s:13:"twitter_intro";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}'),
 (204, 69, 'field_546859fb64bf7', 'a:14:{s:3:"key";s:19:"field_546859fb64bf7";s:5:"label";s:9:"Link Text";s:4:"name";s:17:"twitter_link_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}'),
-(205, 69, 'field_54685a1a64bf8', 'a:14:{s:3:"key";s:19:"field_54685a1a64bf8";s:5:"label";s:11:"Twitter URL";s:4:"name";s:11:"twitter_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}'),
-(206, 69, 'field_54685a2864bf9', 'a:8:{s:3:"key";s:19:"field_54685a2864bf9";s:5:"label";s:9:"Instagram";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}'),
-(207, 69, 'field_54685a3564bfa', 'a:14:{s:3:"key";s:19:"field_54685a3564bfa";s:5:"label";s:5:"Intro";s:4:"name";s:15:"instagram_intro";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}'),
-(208, 69, 'field_54685a3e64bfb', 'a:14:{s:3:"key";s:19:"field_54685a3e64bfb";s:5:"label";s:9:"Link Text";s:4:"name";s:19:"instagram_link_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}'),
-(209, 69, 'field_54685a4964bfc', 'a:14:{s:3:"key";s:19:"field_54685a4964bfc";s:5:"label";s:13:"Instagram URL";s:4:"name";s:13:"instagram_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:10;}'),
-(210, 69, 'field_54685a5264bfd', 'a:8:{s:3:"key";s:19:"field_54685a5264bfd";s:5:"label";s:7:"Youtube";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:11;}'),
-(211, 69, 'field_54685a5e64bfe', 'a:14:{s:3:"key";s:19:"field_54685a5e64bfe";s:5:"label";s:5:"Intro";s:4:"name";s:13:"youtube_intro";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:12;}'),
-(212, 69, 'field_54685a6864bff', 'a:14:{s:3:"key";s:19:"field_54685a6864bff";s:5:"label";s:9:"Link Text";s:4:"name";s:18:"facebook_link_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:13;}'),
-(213, 69, 'field_54685a8a64c00', 'a:14:{s:3:"key";s:19:"field_54685a8a64c00";s:5:"label";s:12:"Facebook URL";s:4:"name";s:12:"facebook_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:14;}'),
+(205, 69, 'field_54685a1a64bf8', 'a:14:{s:3:"key";s:19:"field_54685a1a64bf8";s:5:"label";s:11:"Twitter URL";s:4:"name";s:11:"twitter_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}'),
+(206, 69, 'field_54685a2864bf9', 'a:8:{s:3:"key";s:19:"field_54685a2864bf9";s:5:"label";s:9:"Instagram";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}'),
+(207, 69, 'field_54685a3564bfa', 'a:14:{s:3:"key";s:19:"field_54685a3564bfa";s:5:"label";s:5:"Intro";s:4:"name";s:15:"instagram_intro";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}'),
+(208, 69, 'field_54685a3e64bfb', 'a:14:{s:3:"key";s:19:"field_54685a3e64bfb";s:5:"label";s:9:"Link Text";s:4:"name";s:19:"instagram_link_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:10;}'),
+(209, 69, 'field_54685a4964bfc', 'a:14:{s:3:"key";s:19:"field_54685a4964bfc";s:5:"label";s:13:"Instagram URL";s:4:"name";s:13:"instagram_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:12;}'),
+(210, 69, 'field_54685a5264bfd', 'a:8:{s:3:"key";s:19:"field_54685a5264bfd";s:5:"label";s:7:"Youtube";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:13;}'),
+(211, 69, 'field_54685a5e64bfe', 'a:14:{s:3:"key";s:19:"field_54685a5e64bfe";s:5:"label";s:5:"Intro";s:4:"name";s:13:"youtube_intro";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:14;}'),
+(212, 69, 'field_54685a6864bff', 'a:14:{s:3:"key";s:19:"field_54685a6864bff";s:5:"label";s:9:"Link Text";s:4:"name";s:17:"youtube_link_text";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:15;}'),
+(213, 69, 'field_54685a8a64c00', 'a:14:{s:3:"key";s:19:"field_54685a8a64c00";s:5:"label";s:11:"Youtube URL";s:4:"name";s:11:"youtube_url";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:16;}'),
 (215, 69, 'position', 'normal'),
 (216, 69, 'layout', 'no_box'),
 (217, 69, 'hide_on_screen', ''),
-(218, 69, '_edit_lock', '1416125631:1'),
+(218, 69, '_edit_lock', '1416129262:1'),
 (219, 70, 'intro_title', 'Bagikan'),
 (220, 70, '_intro_title', 'field_5468599264bf3'),
 (221, 70, 'intro_description', 'Berpartisipasi dalam gerakan sosial Someone Like Me sangat mudah, cukup dengan mengirimkan cerita lewat Twitter dan status update di Facebook'),
@@ -481,7 +481,6 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (252, 64, '_facebook_url', 'field_54685a8a64c00'),
 (253, 64, 'youtube_intro', 'Nonton bareng dan tulis pendapatmu di YouTube'),
 (254, 64, '_youtube_intro', 'field_54685a5e64bfe'),
-(255, 69, 'rule', 'a:5:{s:5:"param";s:13:"page_template";s:8:"operator";s:2:"==";s:5:"value";s:9:"share.php";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
 (256, 71, 'intro_title', 'Bagikan'),
 (257, 71, '_intro_title', 'field_5468599264bf3'),
 (258, 71, 'intro_description', 'Berpartisipasi dalam gerakan sosial Someone Like Me sangat mudah, cukup dengan mengirimkan cerita lewat Twitter dan status update di Facebook'),
@@ -509,7 +508,86 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (280, 64, 'instagram_link_text', 'Gabung bareng kami di Instagram'),
 (281, 64, '_instagram_link_text', 'field_54685a3e64bfb'),
 (282, 64, 'instagram_url', 'http://instagram.com/ariniastari'),
-(283, 64, '_instagram_url', 'field_54685a4964bfc');
+(283, 64, '_instagram_url', 'field_54685a4964bfc'),
+(285, 72, 'intro_title', 'Bagikan'),
+(286, 72, '_intro_title', 'field_5468599264bf3'),
+(287, 72, 'intro_description', 'Berpartisipasi dalam gerakan sosial Someone Like Me sangat mudah, cukup dengan mengirimkan cerita lewat Twitter dan status update di Facebook'),
+(288, 72, '_intro_description', 'field_546859a264bf4'),
+(289, 72, 'twitter_intro', 'Ikutan ngobrol di Twitter yuk'),
+(290, 72, '_twitter_intro', 'field_546859c064bf6'),
+(291, 72, 'twitter_link_text', 'Gabung bareng kami di Twitter'),
+(292, 72, '_twitter_link_text', 'field_546859fb64bf7'),
+(293, 72, 'twitter_url', 'http://twitter.com/ariniastari'),
+(294, 72, '_twitter_url', 'field_54685a1a64bf8'),
+(295, 72, 'instagram_intro', 'Tunjukin aspirasi kamu lewat Instagram'),
+(296, 72, '_instagram_intro', 'field_54685a3564bfa'),
+(297, 72, 'instagram_link_text', 'Gabung bareng kami di Instagram'),
+(298, 72, '_instagram_link_text', 'field_54685a3e64bfb'),
+(299, 72, 'instagram_url', 'http://instagram.com/ariniastari'),
+(300, 72, '_instagram_url', 'field_54685a4964bfc'),
+(301, 72, 'youtube_intro', 'Nonton bareng dan tulis pendapatmu di YouTube'),
+(302, 72, '_youtube_intro', 'field_54685a5e64bfe'),
+(303, 72, 'youtube_link_text', 'Gabung bareng kami di YouTube'),
+(304, 72, '_youtube_link_text', 'field_54685a6864bff'),
+(305, 72, 'youtube_url', 'http://youtube.com/ariniastari'),
+(306, 72, '_youtube_url', 'field_54685a8a64c00'),
+(307, 64, 'youtube_link_text', 'Gabung bareng kami di YouTube'),
+(308, 64, '_youtube_link_text', 'field_54685a6864bff'),
+(309, 64, 'youtube_url', 'http://youtube.com/ariniastari'),
+(310, 64, '_youtube_url', 'field_54685a8a64c00'),
+(311, 69, 'field_5468690004d7c', 'a:14:{s:3:"key";s:19:"field_5468690004d7c";s:5:"label";s:8:"username";s:4:"name";s:16:"youtube_username";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:17;}'),
+(312, 69, 'field_5468691004d7d', 'a:14:{s:3:"key";s:19:"field_5468691004d7d";s:5:"label";s:8:"Username";s:4:"name";s:16:"twitter_username";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}'),
+(313, 69, 'field_5468691a04d7e', 'a:14:{s:3:"key";s:19:"field_5468691a04d7e";s:5:"label";s:8:"Username";s:4:"name";s:18:"instagram_username";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:11;}'),
+(315, 69, 'rule', 'a:5:{s:5:"param";s:13:"page_template";s:8:"operator";s:2:"==";s:5:"value";s:9:"share.php";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
+(316, 73, 'intro_title', 'Bagikan'),
+(317, 73, '_intro_title', 'field_5468599264bf3'),
+(318, 73, 'intro_description', 'Berpartisipasi dalam gerakan sosial Someone Like Me sangat mudah, cukup dengan mengirimkan cerita lewat Twitter dan status update di Facebook'),
+(319, 73, '_intro_description', 'field_546859a264bf4'),
+(320, 73, 'twitter_intro', 'Ikutan ngobrol di Twitter yuk'),
+(321, 73, '_twitter_intro', 'field_546859c064bf6'),
+(322, 73, 'twitter_link_text', 'Gabung bareng kami di Twitter'),
+(323, 73, '_twitter_link_text', 'field_546859fb64bf7'),
+(324, 73, 'twitter_username', '@someonelikeme'),
+(325, 73, '_twitter_username', 'field_5468691004d7d'),
+(326, 73, 'twitter_url', 'http://twitter.com/ariniastari'),
+(327, 73, '_twitter_url', 'field_54685a1a64bf8'),
+(328, 73, 'instagram_intro', 'Tunjukin aspirasi kamu lewat Instagram'),
+(329, 73, '_instagram_intro', 'field_54685a3564bfa'),
+(330, 73, 'instagram_link_text', 'Gabung bareng kami di Instagram'),
+(331, 73, '_instagram_link_text', 'field_54685a3e64bfb'),
+(332, 73, 'instagram_username', '@someonelikeme'),
+(333, 73, '_instagram_username', 'field_5468691a04d7e'),
+(334, 73, 'instagram_url', 'http://instagram.com/ariniastari'),
+(335, 73, '_instagram_url', 'field_54685a4964bfc'),
+(336, 73, 'youtube_intro', 'Nonton bareng dan tulis pendapatmu di YouTube'),
+(337, 73, '_youtube_intro', 'field_54685a5e64bfe'),
+(338, 73, 'youtube_link_text', 'Gabung bareng kami di YouTube'),
+(339, 73, '_youtube_link_text', 'field_54685a6864bff'),
+(340, 73, 'youtube_url', 'http://youtube.com/ariniastari'),
+(341, 73, '_youtube_url', 'field_54685a8a64c00'),
+(342, 73, 'youtube_username', 'someonelikeme'),
+(343, 73, '_youtube_username', 'field_5468690004d7c'),
+(344, 64, 'twitter_username', '@someonelikeme'),
+(345, 64, '_twitter_username', 'field_5468691004d7d'),
+(346, 64, 'instagram_username', '@someonelikeme'),
+(347, 64, '_instagram_username', 'field_5468691a04d7e'),
+(348, 64, 'youtube_username', 'someonelikeme'),
+(349, 64, '_youtube_username', 'field_5468690004d7c'),
+(350, 74, '_edit_last', '1'),
+(351, 74, 'field_54686b8abc6cd', 'a:8:{s:3:"key";s:19:"field_54686b8abc6cd";s:5:"label";s:6:"Blok 1";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}'),
+(352, 74, 'field_54686ba4bc6ce', 'a:14:{s:3:"key";s:19:"field_54686ba4bc6ce";s:5:"label";s:6:"Header";s:4:"name";s:13:"blok_1_header";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}'),
+(353, 74, 'field_54686bbbbc6cf', 'a:11:{s:3:"key";s:19:"field_54686bbbbc6cf";s:5:"label";s:5:"Intro";s:4:"name";s:12:"blok_1_intro";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}'),
+(354, 74, 'field_54686bd2bc6d0', 'a:8:{s:3:"key";s:19:"field_54686bd2bc6d0";s:5:"label";s:6:"Blok 2";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}'),
+(355, 74, 'field_54686bddbc6d1', 'a:14:{s:3:"key";s:19:"field_54686bddbc6d1";s:5:"label";s:6:"Header";s:4:"name";s:13:"blok_2_header";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}'),
+(356, 74, 'field_54686be7bc6d2', 'a:11:{s:3:"key";s:19:"field_54686be7bc6d2";s:5:"label";s:5:"Intro";s:4:"name";s:12:"blok_2_intro";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}'),
+(357, 74, 'field_54686bf5bc6d3', 'a:8:{s:3:"key";s:19:"field_54686bf5bc6d3";s:5:"label";s:6:"Blok 3";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}'),
+(358, 74, 'field_54686bffbc6d4', 'a:14:{s:3:"key";s:19:"field_54686bffbc6d4";s:5:"label";s:6:"Header";s:4:"name";s:13:"blok_3_header";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}'),
+(359, 74, 'field_54686c08bc6d5', 'a:11:{s:3:"key";s:19:"field_54686c08bc6d5";s:5:"label";s:5:"Intro";s:4:"name";s:12:"blok_3_intro";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}'),
+(360, 74, 'rule', 'a:5:{s:5:"param";s:13:"page_template";s:8:"operator";s:2:"==";s:5:"value";s:8:"visi.php";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
+(361, 74, 'position', 'normal'),
+(362, 74, 'layout', 'no_box'),
+(363, 74, 'hide_on_screen', ''),
+(364, 74, '_edit_lock', '1416129418:1');
 
 -- --------------------------------------------------------
 
@@ -546,7 +624,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=72 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=76 ;
 
 --
 -- Dumping data for table `wp_posts`
@@ -617,15 +695,19 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (61, 1, '2014-11-16 06:02:07', '2014-11-16 06:02:07', '', 'knowledge-2', '', 'inherit', 'open', 'open', '', 'knowledge-2', '', '', '2014-11-16 06:02:07', '2014-11-16 06:02:07', '', 4, 'http://localhost:8888/wp-content/uploads/2014/11/knowledge-2.jpg', 0, 'attachment', 'image/jpeg', 0),
 (62, 1, '2014-11-16 06:02:08', '2014-11-16 06:02:08', '', 'knowledge-3', '', 'inherit', 'open', 'open', '', 'knowledge-3', '', '', '2014-11-16 06:02:08', '2014-11-16 06:02:08', '', 4, 'http://localhost:8888/wp-content/uploads/2014/11/knowledge-3.jpg', 0, 'attachment', 'image/jpeg', 0),
 (63, 1, '2014-11-16 06:02:08', '2014-11-16 06:02:08', '', 'knowledge-4', '', 'inherit', 'open', 'open', '', 'knowledge-4', '', '', '2014-11-16 06:02:08', '2014-11-16 06:02:08', '', 4, 'http://localhost:8888/wp-content/uploads/2014/11/knowledge-4.jpg', 0, 'attachment', 'image/jpeg', 0),
-(64, 1, '2014-11-16 06:37:27', '2014-11-16 06:37:27', '<h4 class="p1">Untuk menjadi bagian dalam gerakan Someone Like Me sangatlah mudah. Kamu cukup memilih salah satu dari opsi di bawah ini!</h4>', 'Ayo Terlibat', '', 'publish', 'open', 'open', '', 'ayo-terlibat', '', '', '2014-11-16 08:10:22', '2014-11-16 08:10:22', '', 0, 'http://localhost:8888/?page_id=64', 0, 'page', '', 0),
+(64, 1, '2014-11-16 06:37:27', '2014-11-16 06:37:27', '<h4 class="p1">Untuk menjadi bagian dalam gerakan Someone Like Me sangatlah mudah. Kamu cukup memilih salah satu dari opsi di bawah ini!</h4>', 'Ayo Terlibat', '', 'publish', 'open', 'open', '', 'ayo-terlibat', '', '', '2014-11-16 09:07:38', '2014-11-16 09:07:38', '', 0, 'http://localhost:8888/?page_id=64', 0, 'page', '', 0),
 (65, 1, '2014-11-16 06:37:27', '2014-11-16 06:37:27', 'It''s easy to get involved with Someone Like Me and there''s loads of ways to do it. Check out the options below!', 'Ayo Terlibat', '', 'inherit', 'open', 'open', '', '64-revision-v1', '', '', '2014-11-16 06:37:27', '2014-11-16 06:37:27', '', 64, 'http://localhost:8888/uncategorized/64-revision-v1', 0, 'revision', '', 0);
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
 (66, 1, '2014-11-16 07:17:31', '2014-11-16 07:17:31', '<h4>It''s easy to get involved with Someone Like Me and there''s loads of ways to do it. Check out the options below!</h4>', 'Ayo Terlibat', '', 'inherit', 'open', 'open', '', '64-revision-v1', '', '', '2014-11-16 07:17:31', '2014-11-16 07:17:31', '', 64, 'http://localhost:8888/uncategorized/64-revision-v1', 0, 'revision', '', 0),
 (67, 1, '2014-11-16 07:20:36', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2014-11-16 07:20:36', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/?post_type=acf&p=67', 0, 'acf', '', 0),
 (68, 1, '2014-11-16 07:57:38', '2014-11-16 07:57:38', '<h4 class="p1">Untuk menjadi bagian dalam gerakan Someone Like Me sangatlah mudah. Kamu cukup memilih salah satu dari opsi di bawah ini!</h4>', 'Ayo Terlibat', '', 'inherit', 'open', 'open', '', '64-revision-v1', '', '', '2014-11-16 07:57:38', '2014-11-16 07:57:38', '', 64, 'http://localhost:8888/uncategorized/64-revision-v1', 0, 'revision', '', 0),
-(69, 1, '2014-11-16 08:04:36', '2014-11-16 08:04:36', '', 'Share Template', '', 'publish', 'closed', 'closed', '', 'acf_share-template', '', '', '2014-11-16 08:08:33', '2014-11-16 08:08:33', '', 0, 'http://localhost:8888/?post_type=acf&#038;p=69', 0, 'acf', '', 0),
+(69, 1, '2014-11-16 08:04:36', '2014-11-16 08:04:36', '', 'Share Template', '', 'publish', 'closed', 'closed', '', 'acf_share-template', '', '', '2014-11-16 09:07:09', '2014-11-16 09:07:09', '', 0, 'http://localhost:8888/?post_type=acf&#038;p=69', 0, 'acf', '', 0),
 (70, 1, '2014-11-16 08:06:48', '2014-11-16 08:06:48', '<h4 class="p1">Untuk menjadi bagian dalam gerakan Someone Like Me sangatlah mudah. Kamu cukup memilih salah satu dari opsi di bawah ini!</h4>', 'Ayo Terlibat', '', 'inherit', 'open', 'open', '', '64-revision-v1', '', '', '2014-11-16 08:06:48', '2014-11-16 08:06:48', '', 64, 'http://localhost:8888/uncategorized/64-revision-v1', 0, 'revision', '', 0),
-(71, 1, '2014-11-16 08:10:22', '2014-11-16 08:10:22', '<h4 class="p1">Untuk menjadi bagian dalam gerakan Someone Like Me sangatlah mudah. Kamu cukup memilih salah satu dari opsi di bawah ini!</h4>', 'Ayo Terlibat', '', 'inherit', 'open', 'open', '', '64-revision-v1', '', '', '2014-11-16 08:10:22', '2014-11-16 08:10:22', '', 64, 'http://localhost:8888/uncategorized/64-revision-v1', 0, 'revision', '', 0);
+(71, 1, '2014-11-16 08:10:22', '2014-11-16 08:10:22', '<h4 class="p1">Untuk menjadi bagian dalam gerakan Someone Like Me sangatlah mudah. Kamu cukup memilih salah satu dari opsi di bawah ini!</h4>', 'Ayo Terlibat', '', 'inherit', 'open', 'open', '', '64-revision-v1', '', '', '2014-11-16 08:10:22', '2014-11-16 08:10:22', '', 64, 'http://localhost:8888/uncategorized/64-revision-v1', 0, 'revision', '', 0),
+(72, 1, '2014-11-16 09:04:47', '2014-11-16 09:04:47', '<h4 class="p1">Untuk menjadi bagian dalam gerakan Someone Like Me sangatlah mudah. Kamu cukup memilih salah satu dari opsi di bawah ini!</h4>', 'Ayo Terlibat', '', 'inherit', 'open', 'open', '', '64-revision-v1', '', '', '2014-11-16 09:04:47', '2014-11-16 09:04:47', '', 64, 'http://localhost:8888/uncategorized/64-revision-v1', 0, 'revision', '', 0),
+(73, 1, '2014-11-16 09:07:38', '2014-11-16 09:07:38', '<h4 class="p1">Untuk menjadi bagian dalam gerakan Someone Like Me sangatlah mudah. Kamu cukup memilih salah satu dari opsi di bawah ini!</h4>', 'Ayo Terlibat', '', 'inherit', 'open', 'open', '', '64-revision-v1', '', '', '2014-11-16 09:07:38', '2014-11-16 09:07:38', '', 64, 'http://localhost:8888/uncategorized/64-revision-v1', 0, 'revision', '', 0),
+(74, 1, '2014-11-16 09:19:16', '2014-11-16 09:19:16', '', 'Visi Template', '', 'publish', 'closed', 'closed', '', 'acf_visi-template', '', '', '2014-11-16 09:19:16', '2014-11-16 09:19:16', '', 0, 'http://localhost:8888/?post_type=acf&#038;p=74', 0, 'acf', '', 0),
+(75, 1, '2014-11-16 09:19:22', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2014-11-16 09:19:22', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/?page_id=75', 0, 'page', '', 0);
 
 -- --------------------------------------------------------
 
