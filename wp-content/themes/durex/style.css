@@ -5544,7 +5544,7 @@ button.close {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .sprites.more.center {
-    margin-top: 15%; } }
+    margin-top: 60%; } }
 /* Large devices (large desktops, 1200px and up) */
 body {
   background: #f0ebe8;

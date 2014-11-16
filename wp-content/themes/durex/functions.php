@@ -136,6 +136,9 @@ function set_body_id() {
 	if ( is_page_template( 'visi.php' ) ) {
 		return "visi";
 	}
+	if ( is_page_template( 'durex.php' ) ) {
+		return ;
+	}
 	if(is_page()){
 		return "page";
 	} 
