@@ -136,7 +136,7 @@ function set_body_id() {
 		return "visi";
 	}
 	if ( is_page_template( 'durex.php' ) ) {
-		return ;
+		return "home";
 	}
 	if ( is_page_template( 'menurut-kamu.php' ) ) {
 		return "menurut_kamu";
