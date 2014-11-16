@@ -63,3 +63,18 @@ function set_class($image, $color){
 			}
 	}
 }
+
+function set_body_id() {
+	if(is_category()){
+		return strtolower(get_the_category()[0]->name);
+	} 
+	if ( is_page_template( 'share.php' ) ) {
+		return "ayo_terlibat";
+	}
+	if(is_page()){
+		return "page";
+	} 
+	if(is_single()){
+		return "inner";
+	} 
+}

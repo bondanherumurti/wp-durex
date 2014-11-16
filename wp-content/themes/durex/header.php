@@ -16,30 +16,7 @@
     <![endif]-->
     <?php wp_head(); ?>
   </head>
-  <?php
-		if(is_category('')){
-	?>
-			<body id='<?php echo strtolower(get_the_category()[0]->name);?>'>
-	<?php
-		} 
-	?>
-
-	<?php
-		if(is_page()){
-	?>
-			<body id='page'>
-	<?php
-		} 
-	?>
-
-	<?php
-		if(is_single()){
-	?>
-			<body id='inner'>
-	<?php
-		} 
-	?>
-	
+<body id="<?php echo set_body_id(); ?>">
 	<div class='container-fluid'>
 	  <div class='top-section'>
 	    <div class='container'>
