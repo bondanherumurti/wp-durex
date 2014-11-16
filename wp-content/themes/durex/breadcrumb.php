@@ -1,3 +1,7 @@
+<?php
+  // Get the URL of this category
+  $category_link = get_category_link( the_category_ID($echo=false) );
+?>
 <div class='row'>
   <div class='col-xs-12'>
     <ol class='breadcrumb'>
