@@ -3,7 +3,7 @@
           <div class='row'>
             <div class='col-sm-4'>
               <div class='sprites logo-campaign title'></div>
-              <p>Someone Like Me is a global social movement created by Durex and the MTV Staying Alive Foundation, providing a stage for young people to talk about sex more openly</p>
+              <p><?php bloginfo('description'); ?></p>
             </div>
             <div class='col-sm-4'>
               <div class='title'>Partners</div>
