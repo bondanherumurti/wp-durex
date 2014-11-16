@@ -133,6 +133,9 @@ function set_body_id() {
 	if ( is_page_template( 'share.php' ) ) {
 		return "ayo_terlibat";
 	}
+	if ( is_page_template( 'visi.php' ) ) {
+		return "visi";
+	}
 	if(is_page()){
 		return "page";
 	} 
