@@ -43,17 +43,17 @@ Template Name: Share Page
                 <p><?php the_field( "intro_description" );  ?></p>
                 <ul class='share'>
                   <li>
-                    <a href=''>
+                    <a href='https://www.facebook.com/sharer/sharer.php?u=http://metaspace.co'>
                       <div class='sprites fb-share'></div>
                     </a>
                   </li>
                   <li>
-                    <a href=''>
+                    <a href='https://twitter.com/home?status=Jangan%20takut%20untuk%20bercerita,%20share%20with%20us%20disini'>
                       <div class='sprites twitter-share'></div>
                     </a>
                   </li>
                   <li>
-                    <a href=''>
+                    <a href='https://plus.google.com/share?url=Jangan%20takut%20untuk%20bercerita,%20share%20with%20us%20disini'>
                       <div class='sprites google-share'></div>
                     </a>
                   </li>
