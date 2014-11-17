@@ -40,17 +40,7 @@
       <div class='bottom-section'>
         <div class='container'>
           <div class='col-sm-6 left col-xs-12'>
-            <ul>
-              <li>
-                <a href='#'>Terms and Conditions</a>
-              </li>
-              <li>
-                <a href='#'>Privacy Policy</a>
-              </li>
-              <li>
-                <a href='#'>Cookies</a>
-              </li>
-            </ul>
+            <?php  wp_nav_menu( array('theme_location' => 'footer' ) ); ?>
           </div>
           <div class='col-sm-4 col-sm-offset-2 hidden-xs'>
             <div class='copyright'>Copyright 2014 All Rights Reserved</div>

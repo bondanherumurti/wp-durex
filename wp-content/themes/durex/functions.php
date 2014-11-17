@@ -20,6 +20,19 @@ function enqueue_theme_scripts(){
 }
 add_action( 'wp_footer', 'enqueue_theme_scripts' );
 
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if( in_array('current-menu-item', $classes) ){
+             $classes[] = 'active ';
+     }
+     return $classes;
+}
+
+add_action( 'after_setup_theme', 'register_my_menu' );
+function register_my_menu() {
+  register_nav_menu( 'footer', 'Footer Menu' );
+}
+
 function load_hashtag_instagram($limit){
 
 	$api = 'https://api.instagram.com/v1/tags/belsbee/media/recent?client_id=d5f3ef48b54d4bcc814723ea773f82e0'; //api request (edit this to reflect tags)
