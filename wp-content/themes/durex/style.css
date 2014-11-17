@@ -5721,7 +5721,6 @@ p.bigger {
 
 .bg-tongue {
   background: url("assets/images/bg-tongue.jpg");
-  min-height: 350px;
   background-size: 100% 100%;
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -5806,7 +5805,9 @@ p.bigger {
     color: #fff; }
 
 .twitter-feed {
-  margin-top: 20px; }
+  margin-top: 20px; 
+  min-height: 90px;
+}
 
 .middle-section .col-sm-4, .middle-section .col-sm-8 {
   padding-left: 0px;
@@ -6109,6 +6110,7 @@ ul.file-under {
     padding-top: 120px; }
 
   .bg-tongue {
+    min-height: 446px;
     padding-bottom: 18px; }
 
   .col-xs-12.menu {
@@ -6177,7 +6179,9 @@ ul.file-under {
 
   .bg-tongue {
     padding-bottom: 49px;
-    padding-top: 20px; }
+    padding-top: 20px; 
+    min-height: 401px;
+  }
     .bg-tongue p {
       font-size: 15px;
       line-height: 24px; }
@@ -6227,6 +6231,9 @@ ul.file-under {
   h3.white-text {
     padding-bottom: 20px; }
 
+  .bg-tongue {
+    min-height: 376px;
+  }
   .bg-tongue h3 {
     padding-bottom: 20px;
     padding-top: 15px; }

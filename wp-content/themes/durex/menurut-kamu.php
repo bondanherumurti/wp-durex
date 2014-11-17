@@ -53,7 +53,7 @@ Template Name: Menurut Kamu Template
             <div class='col-sm-4'>
               <div class='eqheight'>
                 <div class='sprites badges youtube'></div>
-                <img class='youtube youtube-video' data-video='<?php echo $content['body'];?>' src='<?php echo $content['cover']; ?>'/>
+                <img class='youtube-play youtube-video' data-video='<?php echo $content['body'];?>' src='<?php echo $content['cover']; ?>'/>
               </div>
             </div>
           <?php break;?>
@@ -90,8 +90,9 @@ Template Name: Menurut Kamu Template
       var heights = jQuery(".eqheight").map(function() {
         return jQuery(this).height();
       }).get();
-  
-      var maxHeight = Math.max.apply(null, heights) -90;
+      console.log(heights);
+
+      var maxHeight = Math.max.apply(null, heights);
       jQuery(".eqheight").height(maxHeight);
       jQuery(".youtube-video").height(maxHeight);
   
