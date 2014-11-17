@@ -35,7 +35,7 @@ function register_my_menu() {
 
 function load_hashtag_instagram($limit){
 
-	$api = 'https://api.instagram.com/v1/tags/belsbee/media/recent?client_id=d5f3ef48b54d4bcc814723ea773f82e0'; //api request (edit this to reflect tags)
+	$api = 'https://api.instagram.com/v1/tags/someonelikeme/media/recent?client_id=d5f3ef48b54d4bcc814723ea773f82e0'; //api request (edit this to reflect tags)
 	$cache = './ig-cache.json';
 
 	if(file_exists($cache)){
@@ -72,7 +72,7 @@ function load_hashtag_twitter(){
 	);
 
 	$url = 'https://api.twitter.com/1.1/search/tweets.json';
-	$getfield = '?q=%23superbowl&result_type=recent';
+	$getfield = '?q=%someonelikeme&result_type=recent';
 	$requestMethod = 'GET';
 	$cache = './twitter-cache.json';
 
