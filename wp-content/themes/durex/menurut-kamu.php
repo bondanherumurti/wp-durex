@@ -8,7 +8,7 @@ Template Name: Menurut Kamu Template
             <div class='row'>
               <div class='col-xs-12'>
                 <div class='tagline'>
-                  <h1>Menurut Kamu ?</h1>
+                  <h1><?php echo get_the_title(); ?></h1>
                   <div class='line pink'></div>
                 </div>
               </div>
@@ -17,7 +17,15 @@ Template Name: Menurut Kamu Template
               <div class='col-sm-8'>
                 <div class='row someone-like-me'>
                   <div class='col-md-12'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent enim leo, pharetra nec orci eu, lobortis tincidunt mi. Sed malesuada, est in interdum ornare, est justo sodales sapien, a dictum lorem odio vitae nulla</h4>
+                    <?php
+                      // Start the Loop.
+                      while ( have_posts() ) : the_post();
+
+                        // Include the page content template.
+                        the_content();
+
+                      endwhile;
+                    ?>
                   </div>
                 </div>
               </div>
