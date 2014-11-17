@@ -49,7 +49,7 @@ function load_hashtag_instagram($limit){
 
 	    $images = array();
 
-	    dd($response);
+	    // dd($response);
 
 	    if($response){
 	        file_put_contents($cache,$response['body']); //Save as json
@@ -188,7 +188,7 @@ function mix_video_blog_instagram(){
 
 	// d($instagram_contents);
 	// d($post_blogs);
-	d($_GET);
+	// d($_GET);
 	$post_video = get_posts($args);
 	//sorting timestamp
 	if($_GET['filter']){
