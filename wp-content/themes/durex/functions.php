@@ -9,6 +9,7 @@ function enqueue_theme_scripts(){
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', true);
 	wp_enqueue_script('bootstrap', get_stylesheet_directory_uri().'/assets/javascripts/bootstrap.js', true);
 	wp_enqueue_script('durex', get_stylesheet_directory_uri().'/assets/javascripts/durex.js', true);
+	wp_enqueue_script('popupjs', get_stylesheet_directory_uri().'/assets/javascripts/popup.js', true);
 	//dd(is_category('pengetahuan'));
 	if(is_category('pengetahuan')){
 		wp_enqueue_script('knowledge', get_stylesheet_directory_uri().'/assets/javascripts/knowledge.js', true);
@@ -25,7 +26,7 @@ function load_hashtag_instagram($limit){
 	$api = 'https://api.instagram.com/v1/tags/belsbee/media/recent?client_id=d5f3ef48b54d4bcc814723ea773f82e0'; //api request (edit this to reflect tags)
 	$cache = './ig-cache.json';
 
-	if(file_exists($cache)){
+	if(file_exists($cache) && filemtime($cache) > time() - 60*60){
 	    // If a cache file exists, and it is newer than 1 hour, use it
 	    $result = file_get_contents($cache); //Decode as an json array
 	}
@@ -36,7 +37,7 @@ function load_hashtag_instagram($limit){
 
 	    $images = array();
 
-	    dd($response);
+	    //dd($response);
 
 	    if($response){
 	        file_put_contents($cache,$response['body']); //Save as json
@@ -254,3 +255,221 @@ function mix_video_blog_instagram(){
 	//dd($result);
 	return $result;
 }
+
+/** Get tweet count from Twitter API (v1.1) */
+
+function ds_post_tweet_count( $post_id ) {
+ 
+  // Check for transient
+  if ( ! ( $count = get_transient( 'ds_post_tweet_count' . $post_id ) ) ) {
+ 
+    // Do API call
+    $response = wp_remote_retrieve_body( wp_remote_get( 'https://cdn.api.twitter.com/1/urls/count.json?url=' . urlencode( get_permalink( $post_id ) ) ) );
+ 
+    // If error in API call, stop and don't store transient
+    if ( is_wp_error( $response ) )
+      return 'error';
+ 
+    // Decode JSON
+    $json = json_decode( $response );
+ 
+    // Set total count
+    $count = absint( $json->count );
+ 
+    // Set transient to expire every 30 minutes
+    set_transient( 'ds_post_tweet_count' . $post_id, absint( $count ), 30 * MINUTE_IN_SECONDS );
+ 
+  }
+ 
+ return absint( $count );
+ 
+}  /** Twitter End */
+ 
+ 
+/** Get like count from Facebook FQL  */
+
+function ds_post_like_count( $post_id ) {
+ 
+  // Check for transient
+  if ( ! ( $count = get_transient( 'ds_post_like_count' . $post_id ) ) ) {
+ 
+    // Setup query arguments based on post permalink
+    $fql  = "SELECT url, ";
+    //$fql .= "share_count, "; // total shares
+    //$fql .= "like_count, "; // total likes
+    //$fql .= "comment_count, "; // total comments
+    $fql .= "total_count "; // summed total of shares, likes, and comments (fastest query)
+    $fql .= "FROM link_stat WHERE url = '" . get_permalink( $post_id ) . "'";
+ 
+    // Do API call
+    $response = wp_remote_retrieve_body( wp_remote_get( 'https://api.facebook.com/method/fql.query?format=json&query=' . urlencode( $fql ) ) );
+ 
+    // If error in API call, stop and don't store transient
+    if ( is_wp_error( $response ) )
+      return 'error';
+ 
+    // Decode JSON
+    $json = json_decode( $response );
+ 
+    // Set total count
+    $count = absint( $json[0]->total_count );
+ 
+    // Set transient to expire every 30 minutes
+    set_transient( 'ds_post_like_count' . $post_id, absint( $count ), 30 * MINUTE_IN_SECONDS );
+ 
+  }
+ 
+ return absint( $count );
+ 
+} /** Facebook End  */
+
+
+/** Get share count from Google Plus */
+
+function ds_post_plusone_count($post_id) {
+
+	// Check for transient
+	if ( ! ( $count = get_transient( 'ds_post_plus_count' . $post_id ) ) ) {
+     
+	    $args = array(
+	            'method' => 'POST',
+	            'headers' => array(
+	                // setup content type to JSON 
+	                'Content-Type' => 'application/json'
+	            ),
+	            // setup POST options to Google API
+	            'body' => json_encode(array(
+	                'method' => 'pos.plusones.get',
+	                'id' => 'p',
+	                'method' => 'pos.plusones.get',
+	                'jsonrpc' => '2.0',
+	                'key' => 'p',
+	                'apiVersion' => 'v1',
+	                'params' => array(
+	                    'nolog'=>true,
+	                    'id'=> get_permalink( $post_id ),
+	                    'source'=>'widget',
+	                    'userId'=>'@viewer',
+	                    'groupId'=>'@self'
+	                ) 
+	             )),
+	             // disable checking SSL sertificates               
+	            'sslverify'=>false
+	        );
+	     
+	    // retrieves JSON with HTTP POST method for current URL  
+	    $json_string = wp_remote_post("https://clients6.google.com/rpc", $args);
+	     
+	    if (is_wp_error($json_string)){
+	        // return zero if response is error                             
+	        return "0";             
+	    } else {        
+	        $json = json_decode($json_string['body'], true);                    
+	        // return count of Google +1 for requsted URL
+	        $count = intval( $json['result']['metadata']['globalCounts']['count'] ); 
+	    }
+	    
+	    // Set transient to expire every 30 minutes
+		set_transient( 'ds_post_plus_count' . $post_id, absint( $count ), 30 * MINUTE_IN_SECONDS );
+	    
+	}
+ 
+	return absint( $count );    
+} /** Google Plus End */
+
+
+/** Get Flattr count */
+
+function ds_post_flattr_count( $post_id ) {
+ 
+  // Check for transient
+  if ( ! ( $count = get_transient( 'ds_post_flattr_count' . $post_id ) ) ) {
+ 
+    // Check if URL exists
+    $response = wp_remote_retrieve_body( wp_remote_get( 'https://api.flattr.com/rest/v2/things/lookup/?url=' . urlencode( get_permalink( $post_id ) ) ) );
+ 
+    // Decode JSON
+    $json = json_decode( $response );
+ 
+	// Get URL ID
+	$message = $json->message;
+	
+	if ($message == "not_found") {
+      return 0;
+	}
+	
+	else {
+		$location = $json->location;
+		$flattrs = $json->flattrs;
+		$count = $flattrs;
+	}
+	
+	// Set transient to expire every 30 minutes
+	set_transient( 'ds_post_flattr_count' . $post_id, absint( $count ), 30 * MINUTE_IN_SECONDS );
+ 
+  }
+ 
+ return absint( $count );
+ 
+} /** Flattr End */
+
+
+/** Get Count from LinkedIn */
+
+function ds_post_linkedin_count( $post_id ) {
+ 
+  // Check for transient
+  if ( ! ( $count = get_transient( 'ds_post_linkedin_count' . $post_id ) ) ) {
+ 
+    // Do API call
+    $response = wp_remote_retrieve_body( wp_remote_get( 'https://www.linkedin.com/countserv/count/share?url=' . urlencode( get_permalink( $post_id ) ) . '&format=json' ) );
+ 
+    // If error in API call, stop and don't store transient
+    if ( is_wp_error( $response ) )
+      return 'error';
+ 
+    // Decode JSON
+    $json = json_decode( $response );
+ 
+    // Set total count
+    $count = absint( $json->count );
+ 
+    // Set transient to expire every 30 minutes
+    set_transient( 'ds_post_linkedin_count' . $post_id, absint( $count ), 30 * MINUTE_IN_SECONDS );
+ 
+  }
+ 
+ return absint( $count );
+
+}  /** LinkedIn End */
+
+ 
+/** Markup for Social Media Icons */
+
+function ds_social_media_icons() {
+	
+  // Get the post ID
+  $post_id = get_the_ID(); ?>
+ 
+  <div class="social-icons-wrap">
+	<ul class="social-icons">
+		<!-- Facebook Button-->
+		<li class="social-icon facebook">
+			<a onclick="javascript:popupCenter('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID','Facebook Share', '540', '400');return false;" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID" target="blank">
+					<i class="fa fa-facebook"></i> Share </a>
+					<span class="share-count"><?php echo ds_post_like_count( $post_id ); ?></span>
+		</li>
+		<!-- Twitter Button -->
+		<li class="social-icon twitter">
+			<a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE" target="blank">
+					<i class="fa fa-twitter"></i> Tweet </a>
+					<span class="share-count"><?php echo ds_post_tweet_count( $post_id ); ?></span>
+		</li>
+		<!-- Google + Button-->
+		<li class="social-icon google-plus">
+			<a onclick="javascript:popupCenter('https://plus.google.com/share?url=<?php the_permalink(); ?>','Share on Google+', '600', '600');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="blank"><i class="fa fa-google-plus"></i> Google+</a><span class="share-count"><?php echo ds_post_plusone_count( $post_id ); ?></span>
+		</li>
+	</ul>
+  </div><!-- .social-icons-wrap -->
+ 
+<?php }

@@ -10,7 +10,7 @@
               </div>
               <div class='col-md-4 hidden-xs col-sm-5'>
                 <div class='share'>
-                  <img src='<?php echo get_stylesheet_directory_uri(); ?>/assets/images/share.png'>
+                  <?php ds_social_media_icons(); ?>
                 </div>
               </div>
             </div>
