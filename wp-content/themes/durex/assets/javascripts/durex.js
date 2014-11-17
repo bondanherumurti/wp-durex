@@ -15,9 +15,13 @@ jQuery('.third-height').css({
     'height': jQuery('.second-height').height() + 26
 });
 
-if (jQuery(window).width() < 960) {
+if (jQuery(window).width() >= 768) {
+   jQuery('.bg-knowledge').css({
+	    'height': jQuery('.bg-tongue').height() + 38
+	});
 }
-else {
+
+if (jQuery(window).width() >= 992) {
    jQuery('.bg-knowledge').css({
 	    'height': jQuery('.bg-tongue').height() + 69
 	});

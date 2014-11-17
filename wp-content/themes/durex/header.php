@@ -31,22 +31,22 @@
 	            <div class='float-right'>
 	              <ul class='social-media hidden-xs'>
 	                <li>
-	                  <a href='#'>
+	                  <a href='https://www.facebook.com/Durex.Id' target="_blank">
 	                    <div class='sprites fb-small'></div>
 	                  </a>
 	                </li>
 	                <li>
-	                  <a href='#'>
+	                  <a href='https://twitter.com/Durex_Love' target="_blank">
 	                    <div class='sprites twitter-small'></div>
 	                  </a>
 	                </li>
 	                <li>
-	                  <a href='#'>
+	                  <a href='#' target="_blank">
 	                    <div class='sprites instagram-small'></div>
 	                  </a>
 	                </li>
 	                <li>
-	                  <a href='#'>
+	                  <a href='http://www.youtube.com/user/DurexIndonesia' target="_blank">
 	                    <div class='sprites youtube-small'></div>
 	                  </a>
 	                </li>
@@ -67,30 +67,7 @@
 	                </button>
 	              </div>
 	              <!-- Collect the nav links, forms, and other content for toggling -->
-	              <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
-	                <ul class='nav navbar-nav'>
-	                  <li>
-	                    <a href='#'>Home</a>
-	                  </li>
-	                  <li>
-	                    <a href='#'>Menurut Kamu?</a>
-	                  </li>
-	                  <li class='active'>
-	                    <a href='#'>Pengetahuan</a>
-	                  </li>
-	                  <li>
-	                    <a href='#'>Visi</a>
-	                  </li>
-	                </ul>
-	                <!-- <ul class='nav navbar-nav navbar-right'>
-	                  <li>
-	                    <a class='border-search' href='#'>
-	                      <div class='sprites search'></div>
-	                    </a>
-	                  </li>
-	                </ul> -->
-	              </div>
-	              <!-- /.navbar-collapse -->
+	      		  <?php  wp_nav_menu( array( 'container_class' => 'collapse navbar-collapse', 'menu_class' => 'nav navbar-nav', 'container_id' => 'bs-example-navbar-collapse-1', 'theme_location' => 'primary' ) ); ?>
 	            </div>
 	            <!-- /.container-fluid -->
 	          </nav>

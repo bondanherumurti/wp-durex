@@ -21,9 +21,22 @@ function enqueue_theme_scripts(){
 }
 add_action( 'wp_footer', 'enqueue_theme_scripts' );
 
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if( in_array('current-menu-item', $classes) ){
+             $classes[] = 'active ';
+     }
+     return $classes;
+}
+
+add_action( 'after_setup_theme', 'register_my_menu' );
+function register_my_menu() {
+  register_nav_menu( 'footer', 'Footer Menu' );
+}
+
 function load_hashtag_instagram($limit){
 
-	$api = 'https://api.instagram.com/v1/tags/belsbee/media/recent?client_id=d5f3ef48b54d4bcc814723ea773f82e0'; //api request (edit this to reflect tags)
+	$api = 'https://api.instagram.com/v1/tags/someonelikeme/media/recent?client_id=d5f3ef48b54d4bcc814723ea773f82e0'; //api request (edit this to reflect tags)
 	$cache = './ig-cache.json';
 
 	if(file_exists($cache) && filemtime($cache) > time() - 60*60){
@@ -37,7 +50,6 @@ function load_hashtag_instagram($limit){
 
 	    $images = array();
 
-	    //dd($response);
 
 	    if($response){
 	        file_put_contents($cache,$response['body']); //Save as json
@@ -60,7 +72,7 @@ function load_hashtag_twitter(){
 	);
 
 	$url = 'https://api.twitter.com/1.1/search/tweets.json';
-	$getfield = '?q=%23superbowl&result_type=recent';
+	$getfield = '?q=%someonelikeme&result_type=recent';
 	$requestMethod = 'GET';
 	$cache = './twitter-cache.json';
 
@@ -176,7 +188,7 @@ function mix_video_blog_instagram(){
 
 	// d($instagram_contents);
 	// d($post_blogs);
-	d($_GET);
+	// d($_GET);
 	$post_video = get_posts($args);
 	//sorting timestamp
 	if($_GET['filter']){

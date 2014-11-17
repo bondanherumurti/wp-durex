@@ -5502,6 +5502,12 @@ button.close {
     width: 38px;
     height: 84px;
     margin-top: 55%; }
+  .sprites.big-instagram {
+    background-position: -208px -295px;
+    width: 63px;
+    height: 63px;
+    margin-top: 55%;
+  }
   .sprites.big-youtube {
     background-position: -54px -292px;
     width: 57px;
@@ -5721,7 +5727,6 @@ p.bigger {
 
 .bg-tongue {
   background: url("assets/images/bg-tongue.jpg");
-  min-height: 350px;
   background-size: 100% 100%;
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -5806,7 +5811,9 @@ p.bigger {
     color: #fff; }
 
 .twitter-feed {
-  margin-top: 20px; }
+  margin-top: 20px; 
+  min-height: 90px;
+}
 
 .middle-section .col-sm-4, .middle-section .col-sm-8 {
   padding-left: 0px;
@@ -5952,6 +5959,7 @@ ul.file-under {
 #pengetahuan .someone-like-me {
   margin-top: 71px; }
 #pengetahuan .tagline {
+  margin: 3px 0;
   padding-top: 65px; }
   #pengetahuan .tagline .line.pink {
     margin: 0;
@@ -5986,6 +5994,9 @@ ul.file-under {
 #menurut_kamu .top-section {
   background: url("assets/images/bg-menurut-kamu.jpg");
   background-size: 100% 100%; }
+#menurut_kamu .tagline {
+  margin: 4px 0;
+}
 #menurut_kamu .tagline .line.pink {
   margin-left: 0; }
 #menurut_kamu .middle-section img {
@@ -6109,6 +6120,7 @@ ul.file-under {
     padding-top: 120px; }
 
   .bg-tongue {
+    min-height: 446px;
     padding-bottom: 18px; }
 
   .col-xs-12.menu {
@@ -6177,7 +6189,9 @@ ul.file-under {
 
   .bg-tongue {
     padding-bottom: 49px;
-    padding-top: 20px; }
+    padding-top: 20px; 
+    min-height: 401px;
+  }
     .bg-tongue p {
       font-size: 15px;
       line-height: 24px; }
@@ -6227,6 +6241,9 @@ ul.file-under {
   h3.white-text {
     padding-bottom: 20px; }
 
+  .bg-tongue {
+    min-height: 376px;
+  }
   .bg-tongue h3 {
     padding-bottom: 20px;
     padding-top: 15px; }
