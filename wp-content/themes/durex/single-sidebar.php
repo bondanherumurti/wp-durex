@@ -1,4 +1,4 @@
-            <?php //dd(load_hashtag_twitter());//dd(load_hashtag_instagram());?>
+            <?php $data = load_hashtag_twitter(4);//dd(load_hashtag_twitter());//dd(load_hashtag_instagram());?>
             <div class='col-md-4 col-sm-5 set-height'>
               <div class='row'>
                 <div class='col-xs-12 reset-padding'>
@@ -20,11 +20,11 @@
                   </div>
                 </div>
                 <div class='col-xs-6'>
-                  <img class='youtube' src='<?php echo load_hashtag_instagram()[0]['images']['standard_resolution']['url'];?>'>
+                  <img class='youtube' src='<?php echo $data[0]['images']['standard_resolution']['url'];?>'>
                   <div class='sprites badges instagram'></div>
                 </div>
                 <div class='col-xs-6'>
-                  <img class='youtube' src='<?php echo load_hashtag_instagram()[1]['images']['standard_resolution']['url'];?>'>
+                  <img class='youtube' src='<?php echo $data[1]['images']['standard_resolution']['url'];?>'>
                   <div class='sprites badges instagram'></div>
                 </div>
                 <div class='col-xs-12 blue-sky'>
@@ -37,11 +37,11 @@
                   </div>
                 </div>
                 <div class='col-xs-6'>
-                  <img class='youtube' src='<?php echo load_hashtag_instagram()[2]['images']['standard_resolution']['url'];?>'>
+                  <img class='youtube' src='<?php echo $data[2]['images']['standard_resolution']['url'];?>'>
                   <div class='sprites badges instagram'></div>
                 </div>
                 <div class='col-xs-6'>
-                  <img class='youtube' src='<?php echo load_hashtag_instagram()[3]['images']['standard_resolution']['url'];?>'>
+                  <img class='youtube' src='<?php echo $data[3]['images']['standard_resolution']['url'];?>'>
                   <div class='sprites badges instagram'></div>
                 </div>
               </div>
