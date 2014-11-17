@@ -467,19 +467,24 @@ function ds_social_media_icons() {
 	<ul class="social-icons">
 		<!-- Facebook Button-->
 		<li class="social-icon facebook">
+			<span class="share-count"><?php echo ds_post_like_count( $post_id ); ?><br/> Likes</span>
 			<a onclick="javascript:popupCenter('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID','Facebook Share', '540', '400');return false;" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID" target="blank">
-					<i class="fa fa-facebook"></i> Share </a>
-					<span class="share-count"><?php echo ds_post_like_count( $post_id ); ?></span>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fb-share.png"/>		
+			</a>
 		</li>
 		<!-- Twitter Button -->
 		<li class="social-icon twitter">
+			<span class="share-count"><?php echo ds_post_tweet_count( $post_id ); ?><br/>Tweets</span>
 			<a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE" target="blank">
-					<i class="fa fa-twitter"></i> Tweet </a>
-					<span class="share-count"><?php echo ds_post_tweet_count( $post_id ); ?></span>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tw-share.png"/>
+			</a>
 		</li>
 		<!-- Google + Button-->
 		<li class="social-icon google-plus">
-			<a onclick="javascript:popupCenter('https://plus.google.com/share?url=<?php the_permalink(); ?>','Share on Google+', '600', '600');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="blank"><i class="fa fa-google-plus"></i> Google+</a><span class="share-count"><?php echo ds_post_plusone_count( $post_id ); ?></span>
+			<span class="share-count"><?php echo ds_post_plusone_count( $post_id ); ?></br>Posts</span>
+			<a onclick="javascript:popupCenter('https://plus.google.com/share?url=<?php the_permalink(); ?>','Share on Google+', '600', '600');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="blank">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/gplud.png"/>
+			</a>
 		</li>
 	</ul>
   </div><!-- .social-icons-wrap -->

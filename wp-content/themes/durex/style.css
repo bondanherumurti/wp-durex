@@ -5891,7 +5891,7 @@ ul.share {
   text-transform: uppercase;
   font-size: 15px; }
 #inner .share {
-  margin-left: -17px;
+  margin-left: -15px;
   margin-top: 60px; }
 #inner .content {
   overflow-y: scroll; }
@@ -6257,13 +6257,15 @@ ul.file-under {
 /* General Social Button Styling */
 .social-icons {
   height: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 .social-icons li {
   list-style-type: none !important;
   float: left;
   margin-top: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-bottom: 10px;
   margin-left: 0 !important;
   font-size: 12px !important;
@@ -6275,7 +6277,7 @@ ul.file-under {
 }
 
 /* Facebook Button Styling */
-li.social-icon.facebook a {
+/*li.social-icon.facebook a {
   border-top: 1px solid #3b5998;
   border-left: 1px solid #3b5998;
   border-bottom: 1px solid #3b5998;
@@ -6292,21 +6294,20 @@ li.social-icon.facebook a {
 li.social-icon.facebook a:hover {
   background-color: #3b5998;
   color: white;
-}
+}*/
 
 li.social-icon.facebook span.share-count {
-  border: 1px solid #3b5998;
-  padding: 3px 10px;
-  -webkit-border-top-right-radius: 3px;
-  border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  color: #3b5998;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+  padding: 10px 5px;
+  background: #033b76;
+  display: block;
+  color: #fff;
+  text-align: center;
+  /* font-size: 13px; */
+  margin-bottom: 4px;
 }
 
 /* Twitter Button Styling */
-li.social-icon.twitter a {
+/*li.social-icon.twitter a {
   border-top: 1px solid #55acee;
   border-left: 1px solid #55acee;
   border-bottom: 1px solid #55acee;
@@ -6323,21 +6324,20 @@ li.social-icon.twitter a {
 li.social-icon.twitter a:hover {
   background-color: #55acee;
   color: white;
-}
+}*/
 
 li.social-icon.twitter span.share-count {
-  border: 1px solid #55acee;
-  padding: 3px 10px;
-  -webkit-border-top-right-radius: 3px;
-  border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  color: #55acee;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+  padding: 10px 5px;
+  background: #2da5da;
+  display: block;
+  color: #fff;
+  text-align: center;
+  /* font-size: 13px; */
+  margin-bottom: 4px;
 }
 
 /* Google+ Button Styling */
-li.social-icon.google-plus a {
+/*li.social-icon.google-plus a {
   border-top: 1px solid #dd4b39;
   border-left: 1px solid #dd4b39;
   border-bottom: 1px solid #dd4b39;
@@ -6355,16 +6355,15 @@ li.social-icon.google-plus a:hover {
   background-color: #dd4b39;
   color: white;
 }
-
+*/
 li.social-icon.google-plus span.share-count {
-  border: 1px solid #dd4b39;
-  padding: 3px 10px;
-  -webkit-border-top-right-radius: 3px;
-  border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  color: #dd4b39;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+  padding: 10px 5px;
+  background: #cf2555;
+  display: block;
+  color: #fff;
+  text-align: center;
+  /* font-size: 13px; */
+  margin-bottom: 4px;
 }
 
 /* Flattr Button Styling */
