@@ -1,4 +1,4 @@
-jQuery('.youtube').click(function(){
+jQuery('.youtube-video').click(function(){
     video = '<iframe width="100%" height="323" allowfullscreen src="'+ jQuery(this).attr('data-video') +'"></iframe>';
     jQuery(this).replaceWith(video);
 });

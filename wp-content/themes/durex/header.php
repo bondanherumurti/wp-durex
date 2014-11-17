@@ -82,13 +82,13 @@
 	                    <a href='#'>Visi</a>
 	                  </li>
 	                </ul>
-	                <ul class='nav navbar-nav navbar-right'>
+	                <!-- <ul class='nav navbar-nav navbar-right'>
 	                  <li>
 	                    <a class='border-search' href='#'>
 	                      <div class='sprites search'></div>
 	                    </a>
 	                  </li>
-	                </ul>
+	                </ul> -->
 	              </div>
 	              <!-- /.navbar-collapse -->
 	            </div>
