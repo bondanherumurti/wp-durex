@@ -5959,6 +5959,7 @@ ul.file-under {
 #pengetahuan .someone-like-me {
   margin-top: 71px; }
 #pengetahuan .tagline {
+  margin: 3px 0;
   padding-top: 65px; }
   #pengetahuan .tagline .line.pink {
     margin: 0;
@@ -5993,6 +5994,9 @@ ul.file-under {
 #menurut_kamu .top-section {
   background: url("assets/images/bg-menurut-kamu.jpg");
   background-size: 100% 100%; }
+#menurut_kamu .tagline {
+  margin: 4px 0;
+}
 #menurut_kamu .tagline .line.pink {
   margin-left: 0; }
 #menurut_kamu .middle-section img {
