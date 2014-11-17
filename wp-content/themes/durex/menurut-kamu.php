@@ -28,13 +28,13 @@ Template Name: Menurut Kamu Template
                   <ul>
                     <li>Filter Category:</li>
                     <li>
-                      <a href='#'>Blog</a>
+                      <a href='<?php echo add_query_arg( 'filter', 'blog', get_permalink());?>'>Blog</a>
                     </li>
                     <li>
-                      <a href='#'>Photos</a>
+                      <a href='<?php echo add_query_arg( 'filter', 'photo', get_permalink());?>'>Photos</a>
                     </li>
                     <li>
-                      <a href='#'>Videos</a>
+                      <a href='<?php echo add_query_arg( 'filter', 'video', get_permalink());?>'>Videos</a>
                     </li>
                   </ul>
                 </div>

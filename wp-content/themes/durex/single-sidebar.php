@@ -1,4 +1,4 @@
-            <?php $data = load_hashtag_twitter(4);//dd(load_hashtag_twitter());//dd(load_hashtag_instagram());?>
+            <?php $data = load_hashtag_instagram(4);//dd($data);//dd(load_hashtag_twitter());//dd(load_hashtag_instagram());?>
             <div class='col-md-4 col-sm-5 set-height'>
               <div class='row'>
                 <div class='col-xs-12 reset-padding'>
