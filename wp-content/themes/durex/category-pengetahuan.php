@@ -10,6 +10,7 @@
  */
 
 get_header(); ?>
+<?php $categories = get_the_category(); ?>
         <div class='row'>
           <div class='col-xs-12'>
             <div class='tagline'>
@@ -17,7 +18,7 @@ get_header(); ?>
                 <?php
                   if(is_category('pengetahuan')){
                     //dd(get_the_category());
-                    echo get_the_category()[0]->name;
+                    echo $categories[0]->name;
                   } 
                 ?>
               </h1>
@@ -33,7 +34,7 @@ get_header(); ?>
                 <?php
                   if(is_category('pengetahuan')){
                     //dd(get_the_category());
-                    echo get_the_category()[0]->description;
+                    echo $categories[0]->description;
                   }
                 ?>
                 </h4>

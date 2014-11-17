@@ -12,7 +12,7 @@
         </a>
       </li>
       <li>
-        <a href='<?php echo esc_url( $category_link ); ?>'><?php echo get_the_category()[0]->name; ?></a>
+        <a href='<?php echo esc_url( $category_link ); ?>'><?php echo $category[0]->name; ?></a>
       </li>
     </ol>
   </div>
