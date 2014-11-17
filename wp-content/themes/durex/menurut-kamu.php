@@ -61,7 +61,7 @@ Template Name: Menurut Kamu Template
             <div class='col-sm-4'>
               <div class='white eqheight'>
                 <div class='container-block'>
-                  <h3><?php echo $content['title']; ?></h3>
+                  <a href="<?php echo $content['permalink'] ?>"><h3><?php echo $content['title']; ?></h3></a>
                   <div class='line green'></div>
                   <?php echo $content['body'];?>
                   <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu sapien sagittis, tempus neque eget, commodo eros</p> -->
