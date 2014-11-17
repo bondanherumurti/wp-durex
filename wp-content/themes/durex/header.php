@@ -31,22 +31,22 @@
 	            <div class='float-right'>
 	              <ul class='social-media hidden-xs'>
 	                <li>
-	                  <a href='#'>
+	                  <a href='https://www.facebook.com/Durex.Id' target="_blank">
 	                    <div class='sprites fb-small'></div>
 	                  </a>
 	                </li>
 	                <li>
-	                  <a href='#'>
+	                  <a href='https://twitter.com/Durex_Love' target="_blank">
 	                    <div class='sprites twitter-small'></div>
 	                  </a>
 	                </li>
 	                <li>
-	                  <a href='#'>
+	                  <a href='#' target="_blank">
 	                    <div class='sprites instagram-small'></div>
 	                  </a>
 	                </li>
 	                <li>
-	                  <a href='#'>
+	                  <a href='http://www.youtube.com/user/DurexIndonesia' target="_blank">
 	                    <div class='sprites youtube-small'></div>
 	                  </a>
 	                </li>
