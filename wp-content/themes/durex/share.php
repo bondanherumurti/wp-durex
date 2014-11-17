@@ -97,7 +97,7 @@ Template Name: Share Page
                     </p></a>
                   </div>
                   <div class='col-xs-4'>
-                    <div class='sprites big-facebook'></div>
+                    <div class='sprites big-instagram'></div>
                   </div>
                 </div>
               </div>

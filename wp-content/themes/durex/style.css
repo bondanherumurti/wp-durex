@@ -5502,6 +5502,12 @@ button.close {
     width: 38px;
     height: 84px;
     margin-top: 55%; }
+  .sprites.big-instagram {
+    background-position: -208px -295px;
+    width: 63px;
+    height: 63px;
+    margin-top: 55%;
+  }
   .sprites.big-youtube {
     background-position: -54px -292px;
     width: 57px;
