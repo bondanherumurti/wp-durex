@@ -25,7 +25,7 @@ function load_hashtag_instagram($limit){
 	$api = 'https://api.instagram.com/v1/tags/belsbee/media/recent?client_id=d5f3ef48b54d4bcc814723ea773f82e0'; //api request (edit this to reflect tags)
 	$cache = './ig-cache.json';
 
-	if(file_exists($cache) && filemtime($cache) > time() - 60*60){
+	if(file_exists($cache)){
 	    // If a cache file exists, and it is newer than 1 hour, use it
 	    $result = file_get_contents($cache); //Decode as an json array
 	}
@@ -35,6 +35,8 @@ function load_hashtag_instagram($limit){
 	    $response = wp_remote_get($api); //change request path to pull different photos
 
 	    $images = array();
+
+	    dd($response);
 
 	    if($response){
 	        file_put_contents($cache,$response['body']); //Save as json
@@ -173,36 +175,81 @@ function mix_video_blog_instagram(){
 
 	// d($instagram_contents);
 	// d($post_blogs);
+	d($_GET);
 	$post_video = get_posts($args);
 	//sorting timestamp
-	foreach($post_video as $post){
-		$container = array();
-		$container['date_created'] = strtotime($post->post_date);
-		$container['title'] = $post -> post_title;
-		$container['body'] = $post -> post_content;
-		$container['type'] = 'video';
-		$container['cover'] = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
-		$result[strtotime($post->post_date)] = $container;
+	if($_GET['filter']){
+		switch ($_GET['filter']) {
+			case 'video':
+					foreach($post_video as $post){
+						$container = array();
+						$container['date_created'] = strtotime($post->post_date);
+						$container['title'] = $post -> post_title;
+						$container['body'] = $post -> post_content;
+						$container['type'] = 'video';
+						$container['cover'] = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+						$result[strtotime($post->post_date)] = $container;
+					}
+				break;
+			case 'blog':
+				foreach($post_blogs as $post){
+					$container = array();
+					$container['date_created'] = strtotime($post->post_date);
+					$container['title'] = $post -> post_title;
+					$container['body'] = $post -> post_excerpt;
+					$container['permalink'] = get_permalink($post ->ID); 
+					$container['type'] = 'blog';
+					$result[strtotime($post->post_date)] = $container;
+				}
+				break;
+			case 'photo':
+				foreach ($instagram_contents as $content) {
+						$container = array();
+						$container['date_created'] = $content['created_time'];
+						$container['title'] = $content['caption'];
+						$container['body'] = $content['images']['standard_resolution'];
+						$container['type'] = 'instagram';
+						$result[$content['created_time']] = $container;
+				}	
+				break;
+			default:
+				# code...
+				break;
+		}
 	}
-
-	foreach($post_blogs as $post){
-		$container = array();
-		$container['date_created'] = strtotime($post->post_date);
-		$container['title'] = $post -> post_title;
-		$container['body'] = $post -> post_excerpt;
-		$container['permalink'] = get_permalink($post ->ID); 
-		$container['type'] = 'blog';
-		$result[strtotime($post->post_date)] = $container;
-	}
-
-	foreach ($instagram_contents as $content) {
+	else {
+		foreach($post_video as $post){
 			$container = array();
-			$container['date_created'] = $content['created_time'];
-			$container['title'] = $content['caption'];
-			$container['body'] = $content['images']['standard_resolution'];
-			$container['type'] = 'instagram';
-			$result[$content['created_time']] = $container;
+			$container['date_created'] = strtotime($post->post_date);
+			$container['title'] = $post -> post_title;
+			$container['body'] = $post -> post_content;
+			$container['type'] = 'video';
+			$container['cover'] = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+			$result[strtotime($post->post_date)] = $container;
+		}
+
+		foreach($post_blogs as $post){
+			$container = array();
+			$container['date_created'] = strtotime($post->post_date);
+			$container['title'] = $post -> post_title;
+			$container['body'] = $post -> post_excerpt;
+			$container['permalink'] = get_permalink($post ->ID); 
+			$container['type'] = 'blog';
+			$result[strtotime($post->post_date)] = $container;
+		}
+
+		foreach ($instagram_contents as $content) {
+				$container = array();
+				$container['date_created'] = $content['created_time'];
+				$container['title'] = $content['caption'];
+				$container['body'] = $content['images']['standard_resolution'];
+				$container['type'] = 'instagram';
+				$result[$content['created_time']] = $container;
+		}
 	}
+
+
+
 	krsort($result);
 	//dd($result);
 	return $result;
