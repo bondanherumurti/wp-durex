@@ -181,6 +181,7 @@ function mix_video_blog_instagram(){
 		$container['title'] = $post -> post_title;
 		$container['body'] = $post -> post_content;
 		$container['type'] = 'video';
+		$container['cover'] = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 		$result[strtotime($post->post_date)] = $container;
 	}
 
@@ -188,7 +189,8 @@ function mix_video_blog_instagram(){
 		$container = array();
 		$container['date_created'] = strtotime($post->post_date);
 		$container['title'] = $post -> post_title;
-		$container['body'] = $post -> post_content;
+		$container['body'] = $post -> post_excerpt;
+		$container['permalink'] = get_permalink($post ->ID); 
 		$container['type'] = 'blog';
 		$result[strtotime($post->post_date)] = $container;
 	}
