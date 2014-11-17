@@ -8,9 +8,9 @@
 </div>
 
 <?php
-
+	$category = get_the_category(); 
 	$args = array(
-		'cat' => the_category_ID($echo=false),
+		'cat' => $category[0]->term_id,
 		'posts_per_page'    => 3,
 		'post__not_in' => array($post->ID),
 	);
