@@ -72,7 +72,7 @@ function load_hashtag_twitter(){
 	);
 
 	$url = 'https://api.twitter.com/1.1/search/tweets.json';
-	$getfield = '?q=%someonelikeme&result_type=recent';
+	$getfield = '?q=%23someonelikeme&result_type=recent';
 	$requestMethod = 'GET';
 	$cache = './twitter-cache.json';
 
@@ -87,7 +87,6 @@ function load_hashtag_twitter(){
 			$response = $twitter->setGetfield($getfield)
 	             ->buildOauth($url, $requestMethod)
 	             ->performRequest();
-
 	    if($response){
 	        file_put_contents($cache,$response); //Save as json
 	        $result = $response;
