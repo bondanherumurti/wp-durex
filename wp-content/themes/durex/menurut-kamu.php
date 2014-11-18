@@ -33,18 +33,9 @@ Template Name: Menurut Kamu Template
             <div class='row'>
               <div class='col-sm-8 filter'>
                 <div class='container-filter'>
-                  <ul>
-                    <li>Filter Category:</li>
-                    <li>
-                      <a href='<?php echo add_query_arg( 'filter', 'blog', get_permalink());?>'>Blog</a>
-                    </li>
-                    <li>
-                      <a href='<?php echo add_query_arg( 'filter', 'photo', get_permalink());?>'>Photos</a>
-                    </li>
-                    <li>
-                      <a href='<?php echo add_query_arg( 'filter', 'video', get_permalink());?>'>Videos</a>
-                    </li>
-                  </ul>
+                  <a style="color: #fff;" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Ayo Terlibat' ) ) ); ?>">
+                    Klik disini untuk berbagi ceritamu
+                  </a>
                 </div>
                 <div class='clearfix'></div>
               </div>
