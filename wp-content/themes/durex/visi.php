@@ -46,12 +46,11 @@ Template Name: Visi Page
                 <ul class='share'>
                   <li>
                     <a onclick="javascript:popupCenter('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID','Facebook Share', '540', '400');return false;" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID" target="blank">
-                    <!-- <a href='https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink( $post->ID ); ?>'> -->
                       <div class='sprites fb-share'></div>
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
+                    <a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE" target="blank">
                       <div class='sprites twitter-share'></div>
                     </a>
                   </li>
