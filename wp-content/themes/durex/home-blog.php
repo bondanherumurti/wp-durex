@@ -6,7 +6,6 @@
 ?>
 <div class='col-sm-6 right'>
   <div class='white container-block height-first'>
-    <h5>Blog</h5>
     <?php
 
       // The Query
