@@ -44,17 +44,17 @@ Template Name: Share Page
                 <p><?php the_field( "intro_description" );  ?></p>
                 <ul class='share'>
                   <li>
-                    <a href='https://www.facebook.com/sharer/sharer.php?u=http://metaspace.co'>
+                    <a onclick="javascript:popupCenter('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID','Facebook Share', '540', '400');return false;" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID" target="blank">
                       <div class='sprites fb-share'></div>
                     </a>
                   </li>
                   <li>
-                    <a href='https://twitter.com/home?status=Jangan%20takut%20untuk%20bercerita,%20share%20with%20us%20disini'>
+                    <a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Berani%20bicara%20untuk%20kamu%20dan%20temanmu!%20Mari%20menginspirasi%20lewat%20aksi%20untuk%20menciptakan%20dunia%20bebas%20HIV/AIDS%20di','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Berani%20bicara%20untuk%20kamu%20dan%20temanmu!%20Mari%20menginspirasi%20lewat%20aksi%20untuk%20menciptakan%20dunia%20bebas%20HIV/AIDS%20di" target="blank">
                       <div class='sprites twitter-share'></div>
                     </a>
                   </li>
                   <li>
-                    <a href='https://plus.google.com/share?url=Jangan%20takut%20untuk%20bercerita,%20share%20with%20us%20disini'>
+                    <a onclick="javascript:popupCenter('https://plus.google.com/share?url=<?php the_permalink(); ?>','Share on Google+', '600', '600');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="blank">
                       <div class='sprites google-share'></div>
                     </a>
                   </li>
