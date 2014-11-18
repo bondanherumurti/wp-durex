@@ -45,7 +45,8 @@ Template Name: Visi Page
                 <div class='line pink'></div>
                 <ul class='share'>
                   <li>
-                    <a href='https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink( $post->ID ); ?>'>
+                    <a onclick="javascript:popupCenter('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID','Facebook Share', '540', '400');return false;" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID" target="blank">
+                    <!-- <a href='https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink( $post->ID ); ?>'> -->
                       <div class='sprites fb-share'></div>
                     </a>
                   </li>
