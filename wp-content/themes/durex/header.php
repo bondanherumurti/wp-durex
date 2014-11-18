@@ -41,11 +41,6 @@
 	                  </a>
 	                </li>
 	                <li>
-	                  <a href='#' target="_blank">
-	                    <div class='sprites instagram-small'></div>
-	                  </a>
-	                </li>
-	                <li>
 	                  <a href='http://www.youtube.com/user/DurexIndonesia' target="_blank">
 	                    <div class='sprites youtube-small'></div>
 	                  </a>

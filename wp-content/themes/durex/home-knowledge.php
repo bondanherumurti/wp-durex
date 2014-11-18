@@ -18,7 +18,6 @@
 ?>
         <div class='col-sm-6 left'>
           <div class='bg-knowledge container-block'>
-            <h5>knowledge</h5>
             <a href="<?php the_permalink();?>"><?php the_title( '<h3>', '</h3>' ); ?></a>
             <div class='line white-line'></div>
             <p><?php the_excerpt(); ?></p>
@@ -31,7 +30,6 @@
           <div class='bg-tongue container-block'>
             <a href="<?php the_permalink();?>"><?php the_title( '<h3>', '</h3>' ); ?></a>
             <?php the_excerpt(); ?>
-            <p><div class='sprites more-smaller'></div></p>
           </div>
         </div>
 <?php

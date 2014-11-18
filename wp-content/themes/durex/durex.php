@@ -7,7 +7,7 @@ Template Name: Front Page
 
             <div class='row'>
               <div class='col-xs-12'>
-                <div class='tagline' style="margin: 45px 0;">
+                <div class='tagline' style="margin: 0;">
                 <?php
                   // Start the Loop.
                   while ( have_posts() ) : the_post();
@@ -48,7 +48,6 @@ Template Name: Front Page
                   <div class='text-center' style='background: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bg-ayo.jpg); background-size: 100% 100%; height: 333px;'>
                   </div>
                   <div class='tosca container-block text-center'>
-                    <p class='bigger'>Be part of something awesome</p>
                   </div>
                 </div>
                 <div class='col-sm-12'>

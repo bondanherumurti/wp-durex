@@ -146,7 +146,7 @@ function set_class($image, $color){
 function set_body_id() {
 	if(is_category()){
 		$categories = get_the_category();
-		return strtolower($categories[0]->name);
+		return strtolower($categories[0]->slug);
 	} 
 	if ( is_page_template( 'share.php' ) ) {
 		return "ayo_terlibat";
@@ -489,7 +489,7 @@ function ds_social_media_icons() {
 		<!-- Twitter Button -->
 		<li class="social-icon twitter">
 			<span class="share-count"><?php echo ds_post_tweet_count( $post_id ); ?><br/>Tweets</span>
-			<a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE" target="blank">
+			<a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=durex_love','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE" target="blank">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/tw-share.png"/>
 			</a>
 		</li>

@@ -5439,17 +5439,17 @@ button.close {
     width: 9px;
     height: 20px; }
   .sprites.twitter-small {
-    background-position: -18px -3px;
-    width: 19px;
-    height: 16px; }
+    background-position: -15px -2px;
+    width: 24px;
+    height: 20px; }
   .sprites.instagram-small {
     background-position: -41px -2px;
     width: 19px;
     height: 19px; }
   .sprites.youtube-small {
-    background-position: -64px -1px;
-    width: 19px;
-    height: 22px; }
+    background-position: -65px -2px;
+    width: 17px;
+    height: 20px; }
   .sprites.search {
     background-position: -5px -24px;
     width: 16px;
@@ -5474,18 +5474,18 @@ button.close {
     height: 38px;
     margin-bottom: 20px; }
   .sprites.fb-share {
-    background-position: -13px -198px;
-    width: 122px;
+    background-position: -3px -226px;
+    width: 135px;
     height: 46px;
     margin: 0 auto; }
   .sprites.twitter-share {
-    background-position: -146px -226px;
-    width: 133px;
+    background-position: -141px -174px;
+    width: 135px;
     height: 46px;
     margin: 0 auto; }
   .sprites.google-share {
-    background-position: -162px -175px;
-    width: 118px;
+    background-position: -141px -226px;
+    width: 135px;
     height: 46px;
     margin: 0 auto; }
   .sprites.home {
@@ -5774,7 +5774,8 @@ p.bigger {
 .bg-purple {
   background: url("assets/images/bg-purple.jpg") no-repeat;
   background-size: 100% 100%;
-  padding-bottom: 10px; }
+  padding-bottom: 28px;
+  padding-top: 20px; }
   .bg-purple.image {
     background: url("assets/images/bg-purple-image.jpg") no-repeat;
     background-size: 100% 100%; }
@@ -5812,7 +5813,7 @@ p.bigger {
 
 .twitter-feed {
   margin-top: 20px; 
-  min-height: 90px;
+  min-height: 110px;
 }
 
 .middle-section .col-sm-4, .middle-section .col-sm-8 {
@@ -5864,7 +5865,7 @@ ul.share {
     margin-bottom: 10px; }
 
 .youtube-height {
-  height: 301px; }
+  height: 339px; }
 
 .bg-tosca {
   background: url("assets/images/bg-tosca.jpg");
@@ -6051,12 +6052,12 @@ ul.file-under {
   padding-top: 0;
   padding-bottom: 20px; }
 #ayo_terlibat .tagline {
-  margin-top: 45px; }
+  margin-top: 18px; }
   #ayo_terlibat .tagline .line.pink {
     margin-left: 0;
     width: 30%; }
 #ayo_terlibat .someone-like-me {
-  margin-top: 127px; }
+  margin-top: 0px; }
 #ayo_terlibat .blok a:hover {
   text-decoration: none;
 } 
@@ -6165,7 +6166,7 @@ ul.file-under {
     line-height: 34px; }
 
   .youtube-height {
-    height: 343px; }
+    height: 358px; }
 
   .bg-knowledge h5 {
     padding-top: 20px; }
@@ -6197,8 +6198,8 @@ ul.file-under {
       line-height: 24px; }
 
   .bg-purple {
-    padding-bottom: 20px;
-    padding-top: 10px; }
+    padding-bottom: 25px;
+    padding-top: 20px; }
     .bg-purple p {
       margin-top: 20px;
       margin-bottom: 20px;
@@ -6228,11 +6229,11 @@ ul.file-under {
     margin-top: 40px; }
 
   .youtube-height {
-    height: 402px; }
+    height: 442px; }
 
   .bg-purple {
-    padding-bottom: 60px;
-    padding-top: 50px; }
+    padding-bottom: 80px;
+    padding-top: 70px; }
     .bg-purple p {
       margin-top: 20px;
       margin-bottom: 20px;
