@@ -142,7 +142,7 @@ function set_class($image, $color){
 function set_body_id() {
 	if(is_category()){
 		$categories = get_the_category();
-		return strtolower($categories[0]->name);
+		return strtolower($categories[0]->slug);
 	} 
 	if ( is_page_template( 'share.php' ) ) {
 		return "ayo_terlibat";
