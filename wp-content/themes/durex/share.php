@@ -8,8 +8,9 @@ Template Name: Share Page
 <div class='row'>
               <div class='col-xs-12'>
                 <div class='tagline'>
-                  <h1><?php echo get_the_title(); ?></h1>
-                  <div class='line pink'></div>
+                  <h1>Dare to Speak</h1>
+                  <h1>Dare to Understand</h1>
+                  <h1>Dare to take action</h1>
                 </div>
               </div>
             </div>
@@ -61,9 +62,8 @@ Template Name: Share Page
               </div>
             </div>
             <div class='col-sm-4 left topper eqheight'>
-	            <div class='text-center' style='background: url(<?php echo get_stylesheet_directory_uri() ?>/assets/images/bg-ayo.jpg); background-size: 100% 100%; height: 333px;'></div>
+	            <div class='text-center' style='background: url(<?php echo get_stylesheet_directory_uri() ?>/assets/images/bg-ayo.jpg); background-size: 100% 100%; height: 379px;'></div>
 	            <div class='tosca container-block text-center'>
-	              <p class='bigger'>Be part of something awesome</p>
 	            </div>
             </div>
           </div>
