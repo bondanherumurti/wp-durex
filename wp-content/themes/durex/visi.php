@@ -50,12 +50,12 @@ Template Name: Visi Page
                     </a>
                   </li>
                   <li>
-                    <a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=XXX_YOUR_TWITTER_HANDLE" target="blank">
+                    <a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Berani%20bicara%20untuk%20kamu%20dan%20temanmu!%20Mari%20menginspirasi%20lewat%20aksi%20untuk%20menciptakan%20dunia%20bebas%20HIV/AIDS%20di','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Berani%20bicara%20untuk%20kamu%20dan%20temanmu!%20Mari%20menginspirasi%20lewat%20aksi%20untuk%20menciptakan%20dunia%20bebas%20HIV/AIDS%20di" target="blank">
                       <div class='sprites twitter-share'></div>
                     </a>
                   </li>
                   <li>
-                    <a href='#'>
+                    <a onclick="javascript:popupCenter('https://plus.google.com/share?url=<?php the_permalink(); ?>','Share on Google+', '600', '600');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="blank">
                       <div class='sprites google-share'></div>
                     </a>
                   </li>
