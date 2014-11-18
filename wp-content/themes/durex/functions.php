@@ -14,6 +14,9 @@ function enqueue_theme_scripts(){
 	if(is_category('pengetahuan')){
 		wp_enqueue_script('knowledge', get_stylesheet_directory_uri().'/assets/javascripts/knowledge.js', true);
 	}
+	if ( is_page_template( 'menurut-kamu.php' ) ) {
+		wp_enqueue_script('jscroll', get_stylesheet_directory_uri().'/assets/javascripts/jquery.jscroll.min.js', true);
+	}
 	// if (is_category( 'pengetahuan' )) {
 	// 	dd("inside conditional");
  //    	wp_enqueue_script('knowledge', get_stylesheet_directory_uri().'/assets/javascripts/knowledge.js', true);
@@ -63,7 +66,7 @@ function load_hashtag_instagram($limit){
 
 
 require_once(get_stylesheet_directory()."/lib/TwitterAPIExchange.php");
-function load_hashtag_twitter(){
+function load_hashtag_twitter($limit){
 	$settings = array(
     'oauth_access_token' => "24874329-U0KzhXoIsa8JBo5dPeSf16L7Vl2uzemk4p5e5usJY",
     'oauth_access_token_secret' => "YV0xtAqDFruDbDsWIAV8IWvQZ79FRtfnZZ0mrFC1jJPx8",
@@ -92,7 +95,8 @@ function load_hashtag_twitter(){
 	        $result = $response;
 	    }
 		}
-	return array_slice(json_decode($result)->statuses, 0, 2);
+	// return array_slice(json_decode($result)->statuses, 0, 2);
+	return $limit != -1 ? array_slice(json_decode($result)->statuses, 0, 2) : json_decode($result)->statuses;
 }
 
 function set_class($image, $color){
@@ -184,8 +188,9 @@ function mix_video_blog_instagram(){
 		)
 	);
 	$instagram_contents = load_hashtag_instagram(-1);
+	$twitter_contents = load_hashtag_twitter(-1);
 
-
+	// dd($twitter_contents);
 	// d($instagram_contents);
 	// d($post_blogs);
 	// d($_GET);
@@ -259,12 +264,21 @@ function mix_video_blog_instagram(){
 				$container['type'] = 'instagram';
 				$result[$content['created_time']] = $container;
 		}
+
+		foreach ($twitter_contents as $content) {
+				$container = array();
+				$container['date_created'] = strtotime($content->created_at);
+				$container['title'] = $content->user->screen_name;
+				$container['body'] = $content->text;
+				$container['type'] = 'twitter';
+				$result[strtotime($content->created_at)] = $container;
+		}
 	}
 
 
 
 	krsort($result);
-	//dd($result);
+	// dd($result);
 	return $result;
 }
 

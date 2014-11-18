@@ -77,6 +77,18 @@ Template Name: Menurut Kamu Template
               </div>
             </div>
           <?php break;?>
+          <?php case 'twitter': ?>
+            <div class='col-sm-4'>
+              <div class='white eqheight'>
+                <div class='container-block'>
+                  <h3>@<?php echo $content['title']; ?></h3>
+                  <div class='line green'></div>
+                  <?php echo $content['body'];?>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu sapien sagittis, tempus neque eget, commodo eros</p> -->
+                </div>
+              </div>
+            </div>
+          <?php break;?>
           <?php case 'instagram': ?>
             <div class='col-sm-4'>
               <div class='eqheight'>
@@ -105,5 +117,10 @@ Template Name: Menurut Kamu Template
       jQuery(".youtube-video").height(maxHeight);
   
     }
+    jQuery('.middle-section').jscroll({
+      padding: 5,
+      contentSelector: '.col-sm-4.eqheight',
+      debug: true
+    });
   });
 </script>

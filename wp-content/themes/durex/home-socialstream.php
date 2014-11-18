@@ -1,4 +1,4 @@
-<?php $data_ig = load_hashtag_instagram(4); $data_tw = load_hashtag_twitter(); ?>
+<?php $data_ig = load_hashtag_instagram(4); $data_tw = load_hashtag_twitter(2); ?>
 
 <div class='col-sm-4'>
   <div class='row'>
