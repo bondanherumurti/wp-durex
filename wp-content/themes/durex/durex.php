@@ -7,7 +7,7 @@ Template Name: Front Page
 
             <div class='row'>
               <div class='col-xs-12'>
-                <div class='tagline' style="margin: 45px 0;">
+                <div class='tagline' style="margin: 0;">
                 <?php
                   // Start the Loop.
                   while ( have_posts() ) : the_post();
