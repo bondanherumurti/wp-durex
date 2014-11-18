@@ -45,7 +45,7 @@ Template Name: Visi Page
                 <div class='line pink'></div>
                 <ul class='share'>
                   <li>
-                    <a href='https://www.facebook.com/sharer/sharer.php'>
+                    <a href='https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink( $post->ID ); ?>'>
                       <div class='sprites fb-share'></div>
                     </a>
                   </li>
