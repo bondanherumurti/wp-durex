@@ -5770,6 +5770,10 @@ p.bigger {
   font-family: "proxima_nova_rgbold";
   padding: 30px;
   padding-bottom: 32px; }
+a:hover .someone-like-me {
+  background: url("assets/images/pink-bg-hover.png") no-repeat;
+  background-size: 100% 100%;
+}
 
 .bg-purple {
   background: url("assets/images/bg-purple.jpg") no-repeat;
