@@ -44,81 +44,77 @@ Template Name: Share Page
                 <p><?php the_field( "intro_description" );  ?></p>
                 <ul class='share'>
                   <li>
-                    <a onclick="javascript:popupCenter('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID','Facebook Share', '540', '400');return false;" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&amp;appId=XXX_YOUR_FACEBOOK_APP_ID" target="blank">
-                      <div class='sprites fb-share'></div>
-                    </a>
-                  </li>
-                  <li>
-                    <a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Berani%20bicara%20untuk%20kamu%20dan%20temanmu!%20Mari%20menginspirasi%20lewat%20aksi%20untuk%20menciptakan%20dunia%20bebas%20HIV/AIDS%20di','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Berani%20bicara%20untuk%20kamu%20dan%20temanmu!%20Mari%20menginspirasi%20lewat%20aksi%20untuk%20menciptakan%20dunia%20bebas%20HIV/AIDS%20di" target="blank">
+                    <a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Tulis%20cerita%20kamu%20disini%20dan%20berbagi%20untuk%20menginspirasi.%20%23SomeOneLikeMe','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Tulis%20cerita%20kamu%20disini%20dan%20berbagi%20untuk%20menginspirasi.%20%23SomeOneLikeMe" target="blank">
                       <div class='sprites twitter-share'></div>
-                    </a>
-                  </li>
-                  <li>
-                    <a onclick="javascript:popupCenter('https://plus.google.com/share?url=<?php the_permalink(); ?>','Share on Google+', '600', '600');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="blank">
-                      <div class='sprites google-share'></div>
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class='col-sm-4 left topper eqheight'>
+            <div class='col-sm-4 left eqheight'>
 	            <div class='text-center' style='background: url(<?php echo get_stylesheet_directory_uri() ?>/assets/images/bg-ayo.jpg); background-size: 100% 100%; height: 379px;'></div>
 	            <div class='tosca container-block text-center'>
 	            </div>
             </div>
           </div>
           <div class='row'>
-            <div class='col-sm-4 blok twitter eqheight-social'>
-              <div class='container-block'>
-                <div class='row'>
-                  <div class='col-xs-8'>
-                    <p><?php the_field('twitter_intro'); ?></p>
-                    <a href="<?php the_field('twitter_url'); ?>" target="_blank"><p class='follow'>
-                      <?php the_field('twitter_link_text'); ?>
-                      <br>
-                      <?php the_field('twitter_username'); ?>
-                    </p></a>
-                  </div>
-                  <div class='col-xs-4'>
-                    <div class='sprites big-twitter'></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class='col-sm-4 blok facebook eqheight-social'>
-              <div class='container-block'>
-                <div class='row'>
-                  <div class='col-xs-8'>
-                    <p><?php the_field('instagram_intro'); ?></p>
-                    <a href="<?php the_field('instagram_url'); ?>" target="_blank"><p class='follow' style='margin-top: 81px;'>
-                      <?php the_field('instagram_link_text'); ?>
-                      <br>
-                      <?php the_field('instagram_username'); ?>
-                    </p></a>
-                  </div>
-                  <div class='col-xs-4'>
-                    <div class='sprites big-instagram'></div>
+            <a href="<?php the_field('twitter_url'); ?>" target="_blank">
+              <div class='col-sm-4 blok twitter eqheight-social'>
+                <div class='container-block'>
+                  <div class='row'>
+                    <div class='col-xs-8'>
+                      <p><?php the_field('twitter_intro'); ?></p>
+                      <a href="<?php the_field('twitter_url'); ?>" target="_blank"><p class='follow'>
+                        <?php the_field('twitter_link_text'); ?>
+                        <br>
+                        <?php the_field('twitter_username'); ?>
+                      </p></a>
+                    </div>
+                    <div class='col-xs-4'>
+                      <div class='sprites big-twitter'></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class='col-sm-4 blok youtube eqheight-social'>
-              <div class='container-block'>
-                <div class='row'>
-                  <div class='col-xs-8'>
-                    <p><?php the_field('youtube_intro'); ?></p>
-                    <a href="<?php the_field('youtube_url'); ?>" target="_blank"><p class='follow'>
-                      <?php the_field('youtube_link_text'); ?>
-                      <br>
-                      <?php the_field('youtube_username'); ?>
-                    </p></a>
-                  </div>
-                  <div class='col-xs-4'>
-                    <div class='sprites big-youtube'></div>
+            </a>
+            <a href="<?php the_field('instagram_url'); ?>" target="_blank">
+              <div class='col-sm-4 blok facebook eqheight-social'>
+                <div class='container-block'>
+                  <div class='row'>
+                    <div class='col-xs-8'>
+                      <p><?php the_field('instagram_intro'); ?></p>
+                      <a href="<?php the_field('instagram_url'); ?>" target="_blank"><p class='follow' style='margin-top: 81px;'>
+                        <?php the_field('instagram_link_text'); ?>
+                        <br>
+                        <?php the_field('instagram_username'); ?>
+                      </p></a>
+                    </div>
+                    <div class='col-xs-4'>
+                      <div class='sprites big-instagram'></div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
+            <a href="<?php the_field('youtube_url'); ?>" target="_blank">
+              <div class='col-sm-4 blok youtube eqheight-social'>
+                <div class='container-block'>
+                  <div class='row'>
+                    <div class='col-xs-8'>
+                      <p><?php the_field('youtube_intro'); ?></p>
+                      <a href="<?php the_field('youtube_url'); ?>" target="_blank"><p class='follow'>
+                        <?php the_field('youtube_link_text'); ?>
+                        <br>
+                        <?php the_field('youtube_username'); ?>
+                      </p></a>
+                    </div>
+                    <div class='col-xs-4'>
+                      <div class='sprites big-youtube'></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -131,8 +127,10 @@ Template Name: Share Page
       var heights = jQuery(".eqheight").map(function() {
         return jQuery(this).height();
       }).get();
+
+      console.log(heights);
   
-      var maxHeight = Math.max.apply(null, heights) -90;
+      var maxHeight = Math.max.apply(null, heights);
       jQuery(".eqheight").height(maxHeight);
   
       var heights_social = jQuery(".eqheight-social").map(function() {
