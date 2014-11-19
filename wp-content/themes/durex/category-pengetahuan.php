@@ -67,7 +67,7 @@ get_header(); ?>
             'meta_key' => 'teaser_appearance_type',
             'meta_value' => 'one_grid',
             'orderby' => 'post_date',
-            'order' => 'ASC',
+            'order' => 'DESC',
             'numberposts' => 5
             )
           );
@@ -79,7 +79,7 @@ get_header(); ?>
             'meta_key' => 'teaser_appearance_type',
             'meta_value' => 'double_grid',
             'orderby' => 'post_date',
-            'order' => 'ASC',
+            'order' => 'DESC',
             'numberposts' => 3
             )
           );
