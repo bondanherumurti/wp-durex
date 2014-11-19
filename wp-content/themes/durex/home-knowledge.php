@@ -1,6 +1,7 @@
 <?php
+    $knowledge_id = get_cat_ID('pengetahuan');
     $args = array(
-      'cat' => 'pengetahuan',
+      'cat' => $knowledge_id,
       'posts_per_page'    => 2,
     );
 ?>
@@ -41,5 +42,6 @@
   }
   /* Restore original Post Data */
   wp_reset_postdata();
+  wp_reset_query();
 
 ?>

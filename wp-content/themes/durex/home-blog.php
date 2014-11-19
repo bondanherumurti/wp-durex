@@ -1,6 +1,7 @@
 <?php
-    $args = array(
-      'cat' => 'blogs',
+  $blog_id = get_cat_ID('blogs');
+    $args_blog = array(
+      'cat' => $blog_id,
       'posts_per_page'    => 1,
     );
 ?>
@@ -9,12 +10,12 @@
     <?php
 
       // The Query
-      $the_query = new WP_Query( $args );
+      $the_query_blog = new WP_Query( $args_blog );
 
       // The Loop
-      if ( $the_query->have_posts() ) {
-        while ( $the_query->have_posts() ) {
-          $the_query->the_post();
+      if ( $the_query_blog->have_posts() ) {
+        while ( $the_query_blog->have_posts() ) {
+          $the_query_blog->the_post();
     ?>
           <a href="<?php the_permalink();?>"><?php the_title( '<h3>', '</h3>' ); ?></a>
           <div class='line green'></div>
@@ -26,6 +27,7 @@
       }
       /* Restore original Post Data */
       wp_reset_postdata();
+      wp_reset_query();
       ?>
   </div>
 </div>
