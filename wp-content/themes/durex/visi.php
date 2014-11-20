@@ -50,7 +50,7 @@ Template Name: Visi Page
                     </a>
                   </li>
                   <li>
-                    <a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Berani%20bicara%20untuk%20kamu%20dan%20temanmu!%20Mari%20menginspirasi%20lewat%20aksi%20untuk%20menciptakan%20dunia%20bebas%20HIV/AIDS%20di','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Berani%20bicara%20untuk%20kamu%20dan%20temanmu!%20Mari%20menginspirasi%20lewat%20aksi%20untuk%20menciptakan%20dunia%20bebas%20HIV/AIDS%20di" target="blank">
+                    <a onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Berani%20bicara%20untuk%20kamu%20dan%20temanmu!%20Mari%20ciptakan%20dunia%20bebas%20HIV/AIDS%20di%20sini%20%23someonelikeme','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=<?php the_permalink(); ?>&amp;text=Berani%20bicara%20untuk%20kamu%20dan%20temanmu!%20Mari%20menginspirasi%20lewat%20aksi%20untuk%20menciptakan%20dunia%20bebas%20HIV/AIDS%20di" target="blank">
                       <div class='sprites twitter-share'></div>
                     </a>
                   </li>
