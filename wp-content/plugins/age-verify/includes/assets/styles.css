@@ -19,7 +19,7 @@
 	width: 100%;
 	background: white;
 	z-index: 10001;
-	padding: 30px 40px 34px;
+	padding: 10px 20px;
 	-webkit-box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 	   -moz-box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 	        box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
@@ -344,6 +344,7 @@ img.logo-age {
 		top: auto;
 		left: auto;
 		width: 60%;
+        padding: 30px 40px 34px;
 		height: auto;
 		margin: 170px auto 0 auto;
 	}
