@@ -1176,7 +1176,6 @@ ol {
   ol ul,
   ol ol {
     margin-bottom: 0; }
-
 .list-unstyled {
   padding-left: 0;
   list-style: none; }
@@ -5469,8 +5468,8 @@ button.close {
     width: 143px;
     height: 20px; }
   .sprites.partners {
-    background-position: -133px -126px;
-    width: 143px;
+    background-position: -180px -126px;
+    width: 90px;
     height: 38px;
     margin-bottom: 20px; }
   .sprites.fb-share {
@@ -5958,6 +5957,34 @@ ul.file-under {
 #page .content .white {
   padding-bottom: 40px; }
 
+ul.years, ul.months {
+  list-style: none;
+}
+
+    ul.years li h3 {
+      color: #ed2d66;
+      text-align: left !important;
+      font-size: 40px;
+    }
+ul.months {
+  padding: 5px;
+  margin-left: -35px;
+}
+  ul.months li {
+    display: inline-block;
+    width: 30%;
+  }
+  ul.months li:nth-child(odd) {
+    /*color: green;*/
+  }
+  ul.months li:nth-child(even) {
+    background: #cae3eb;
+  }
+    ul.months li h4 {
+      color: #033b76;
+      font-family: "proxima_nova_rgbold";
+      font-size: 28px;
+    }
 #pengetahuan .top-section {
   background: url("assets/images/bg-pengetahuan.jpg");
   background-size: 100% 100%; }
