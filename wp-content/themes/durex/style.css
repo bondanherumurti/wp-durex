@@ -6222,7 +6222,9 @@ ul.months {
   #inner .content p {
     margin-top: 20px;
     line-height: 34px; }
-
+  #inner .someone-like-me h1 {
+  font-size: 50px;
+  margin-top: 10px; }
   .youtube-height {
     height: 358px; }
 
