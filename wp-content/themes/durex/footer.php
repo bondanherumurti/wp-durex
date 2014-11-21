@@ -6,7 +6,7 @@
               <p><?php bloginfo('description'); ?></p>
             </div>
             <div class='col-sm-4'>
-              <div class='title'>Partners</div>
+              <div class='title'>Broad to you by</div>
               <div class='sprites partners'></div>
             </div>
             <div class='col-sm-4'>
