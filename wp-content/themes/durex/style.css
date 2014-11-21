@@ -5724,6 +5724,11 @@ p.bigger {
   padding-bottom: 1px;
   padding-top: 1px; }
 
+a:hover .bg-tongue {
+  background: url("assets/images/bg-tongue-hover.jpg");
+  background-size: 100% 100%;
+}
+
 .bg-tongue {
   background: url("assets/images/bg-tongue.jpg");
   background-size: 100% 100%;
@@ -5786,6 +5791,11 @@ a:hover .someone-like-me {
     color: #ffffff;
     font-size: 14px;
     margin-top: 15px; }
+
+a:hover .bg-knowledge {
+  background: url("assets/images/bg-knowledge-hover.jpg") no-repeat;
+  background-size: 100% 100%;
+}
 
 .bg-knowledge, .bg-knowledge-image {
   background: url("assets/images/bg-knowledge.jpg") no-repeat;
@@ -6034,6 +6044,9 @@ ul.months {
 }
 #menurut_kamu .tagline .line.pink {
   margin-left: 0; }
+#menurut_kamu .twitter-feed p {
+  font-size: 20px;
+}
 #menurut_kamu .middle-section img {
   height: 100%; }
 #menurut_kamu .middle-section a {
@@ -6054,7 +6067,7 @@ ul.months {
 #menurut_kamu .middle-section .container-block .line.green {
   margin: 20px 0; }
 #menurut_kamu .someone-like-me {
-  margin-top: 57px; }
+  margin-top: 121px; }
 #menurut_kamu .filter {
   background: #330265;
   color: #fff;
@@ -6105,11 +6118,22 @@ ul.months {
     font-size: 15px; }
 #ayo_terlibat .blok .container-block {
   padding: 30px 55px; }
+#ayo_terlibat a:hover .blok.twitter {
+  background: url("assets/images/bg-twitter-hover.jpg");
+  background-size: 100% 100%;
+}
 #ayo_terlibat .blok.twitter {
   background: url("assets/images/bg-twitter.jpg");
   background-size: 100% 100%; }
+#ayo_terlibat a:hover .blok.facebook {
+  background: url("assets/images/bg-facebook-hover.jpg");
+  background-size: 100% 100%;
+}
 #ayo_terlibat .blok.facebook {
   background: url("assets/images/bg-facebook.jpg");
+  background-size: 100% 100%; }
+#ayo_terlibat a:hover .blok.youtube {
+  background: url("assets/images/bg-youtube-hover.jpg");
   background-size: 100% 100%; }
 #ayo_terlibat .blok.youtube {
   background: url("assets/images/bg-youtube.jpg");
@@ -6257,6 +6281,9 @@ ul.months {
         margin: 2px; } }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  #menurut_kamu .someone-like-me {
+    margin-top: 92px;
+    }
   #menurut_kamu .filter ul li a {
     padding: 17px 50px; }
   #menurut_kamu .top-section h1 {

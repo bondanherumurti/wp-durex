@@ -18,20 +18,24 @@
       if($i == 2){
 ?>
         <div class='col-sm-6 left'>
-          <div class='bg-knowledge container-block'>
-            <a href="<?php the_permalink();?>"><?php the_title( '<h3>', '</h3>' ); ?></a>
-            <div class='line white-line'></div>
-            <p><?php the_excerpt(); ?></p>
-          </div>
+          <a href="<?php the_permalink();?>">
+            <div class='bg-knowledge container-block'>
+              <?php the_title( '<h3>', '</h3>' ); ?>
+              <div class='line white-line'></div>
+              <p><?php the_excerpt(); ?></p>
+            </div>
+          </a>
         </div>
 <?php
       } else {
 ?>
         <div class='col-sm-6 right'>
-          <div class='bg-tongue container-block'>
-            <a href="<?php the_permalink();?>"><?php the_title( '<h3>', '</h3>' ); ?></a>
-            <?php the_excerpt(); ?>
-          </div>
+          <a href="<?php the_permalink();?>">
+            <div class='bg-tongue container-block'>
+              <?php the_title( '<h3>', '</h3>' ); ?>
+              <?php the_excerpt(); ?>
+            </div>
+          </a>
         </div>
 <?php
       }

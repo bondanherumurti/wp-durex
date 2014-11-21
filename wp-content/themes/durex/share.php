@@ -64,11 +64,11 @@ Template Name: Share Page
                   <div class='row'>
                     <div class='col-xs-8'>
                       <p><?php the_field('twitter_intro'); ?></p>
-                      <a href="<?php the_field('twitter_url'); ?>" target="_blank"><p class='follow'>
+                      <p class='follow'>
                         <?php the_field('twitter_link_text'); ?>
                         <br>
                         <?php the_field('twitter_username'); ?>
-                      </p></a>
+                      </p>
                     </div>
                     <div class='col-xs-4'>
                       <div class='sprites big-twitter'></div>
@@ -83,11 +83,11 @@ Template Name: Share Page
                   <div class='row'>
                     <div class='col-xs-8'>
                       <p><?php the_field('instagram_intro'); ?></p>
-                      <a href="<?php the_field('instagram_url'); ?>" target="_blank"><p class='follow' style='margin-top: 81px;'>
+                      <p class='follow' style='margin-top: 81px;'>
                         <?php the_field('instagram_link_text'); ?>
                         <br>
                         <?php the_field('instagram_username'); ?>
-                      </p></a>
+                      </p>
                     </div>
                     <div class='col-xs-4'>
                       <div class='sprites big-instagram'></div>
@@ -102,11 +102,11 @@ Template Name: Share Page
                   <div class='row'>
                     <div class='col-xs-8'>
                       <p><?php the_field('youtube_intro'); ?></p>
-                      <a href="<?php the_field('youtube_url'); ?>" target="_blank"><p class='follow'>
+                      <p class='follow'>
                         <?php the_field('youtube_link_text'); ?>
                         <br>
                         <?php the_field('youtube_username'); ?>
-                      </p></a>
+                      </p>
                     </div>
                     <div class='col-xs-4'>
                       <div class='sprites big-youtube'></div>
