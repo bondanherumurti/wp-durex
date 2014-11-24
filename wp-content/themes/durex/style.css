@@ -5996,6 +5996,12 @@ ul.months {
       font-family: "proxima_nova_rgbold";
       font-size: 28px;
     }
+#pengetahuan a:hover .container-block {
+  background-color: #000;
+  opacity: 0.5;
+  height: 100%;
+  color: #000;
+}
 #pengetahuan .top-section {
   background: url("assets/images/bg-pengetahuan.jpg");
   background-size: 100% 100%; }
@@ -6011,9 +6017,11 @@ ul.months {
 #pengetahuan .line.white-line {
   margin: 20px 0; }
 #pengetahuan .featured {
-  padding: 20px 0; 
   background: url("assets/images/bg-purple.jpg") no-repeat;
   background-size: 100%; }
+  #pengetahuan .featured .container-block {
+    padding: 20px 25px;
+  }
   #pengetahuan .featured h3 {
     text-align: center;
     color: #fff;

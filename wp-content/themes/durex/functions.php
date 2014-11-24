@@ -104,9 +104,9 @@ function set_class($image, $color){
 	    case "pink":
 	        $rgb = "rgba(237, 44, 100, 1), rgba(237, 44, 100, 0.8)";
 	        if($image){
-				return "<div class='container-block bg-knowledge-pink image eqheight' style='background: linear-gradient(".$rgb."), url(".$image."); background-size: 100% 100%;'>";
+				return "<div class='bg-knowledge-pink image eqheight' style='background: linear-gradient(".$rgb."), url(".$image."); background-size: 100% 100%;'>";
 			} else {
-				return "<div class='container-block bg-knowledge-pink image eqheight'>";
+				return "<div class='bg-knowledge-pink image eqheight'>";
 			}
 	        break;
 	    case "green":
@@ -136,9 +136,9 @@ function set_class($image, $color){
 	    case "purple":
 	        $rgb = "rgba(60, 3, 110, 0.8), rgba(60, 3, 110, 0.8)";
 	        if($image){
-				return "<div class='container-block bg-purple image eqheight' style='background: linear-gradient(".$rgb."), url(".$image."); background-size: 100% 100%;'>";
+				return "<div class='bg-purple image eqheight' style='background: linear-gradient(".$rgb."), url(".$image."); background-size: 100% 100%;'>";
 			} else {
-				return "<div class='container-block bg-purple image eqheight'>";
+				return "<div class='bg-purple image eqheight'>";
 			}
 	}
 }
