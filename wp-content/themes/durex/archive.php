@@ -22,7 +22,8 @@ get_header(); ?>
                 <ul class="years">
 	<?php
 		$all_posts = get_posts(array(
-		  'posts_per_page' => -1 // to show all posts
+			'category_name' => 'pengetahuan',
+		  	'posts_per_page' => -1 // to show all posts
 		));
 
 		// this variable will contain all the posts in a associative array

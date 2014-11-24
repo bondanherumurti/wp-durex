@@ -7,7 +7,7 @@ Template Name: Monthly Archive Template
 <?php get_header();?>
 <?php 
   $args = array(
-    'category_slug' => 'pengetahuan',
+    'category_name' => 'pengetahuan',
     'monthnum' => $_GET['month'],
     'year' => $_GET['year'],
   );
