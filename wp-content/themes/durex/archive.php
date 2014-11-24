@@ -50,7 +50,8 @@ get_header(); ?>
 		    <ul class="months">
 		    <?php foreach ($months as $month => $posts ) { // iterates the moths ?>
 		      <li>
-		        <h4><a href="#"><?php printf("%s (%d)", $month, count($months[$month])) ?></a></h4>
+		      	<?php $monthnum = date("m", strtotime($month)) ?>
+		        <h4><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Monthly Archive' ) ) ); ?>?month=<?php echo $monthnum; ?>&year=<?php echo $year; ?>"><?php printf("%s (%d)", $month, count($months[$month])) ?></a></h4>
 
 		      </li>
 		    <?php } // ends foreach for $months ?>

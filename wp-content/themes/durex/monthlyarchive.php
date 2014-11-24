@@ -5,10 +5,20 @@ Template Name: Monthly Archive Template
 ?>
 
 <?php get_header();?>
+<?php 
+  $args = array(
+    'category_slug' => 'pengetahuan',
+    'monthnum' => $_GET['month'],
+    'year' => $_GET['year'],
+  );
+  $the_query = new WP_Query( $args );
+  $monthNum = $_GET['month'];
+  $monthName = date("F", mktime(0, 0, 0, $monthNum, 10));
+?>
             <div class='row'>
               <div class='col-xs-12'>
                 <div class='tagline'>
-                  <h1><?php echo get_the_title(); ?></h1>
+                  <h1><?php echo $monthName ?> <?php echo $_GET['year'] ?></h1>
                   <div class='line pink'></div>
                 </div>
               </div>
@@ -18,51 +28,31 @@ Template Name: Monthly Archive Template
       </div>
       <div class='middle-section'>
         <div class='container'>
+          
           <div class='row'>
-          <?php foreach(mix_video_blog_instagram() as $content): ?>
-          <?php switch($content['type']): 
-          case 'video': ?>
-            <div class='col-sm-4'>
-              <div class='eqheight'>
-                <div class='sprites badges youtube'></div>
-                <img class='youtube-play youtube-video' data-video='<?php echo $content['body'];?>' src='<?php echo $content['cover']; ?>'/>
-              </div>
-            </div>
-          <?php break;?>
-          <?php case 'blog': ?>
-            <div class='col-sm-4'>
-              <div class='white eqheight'>
-                <div class='container-block'>
-                  <a href="<?php echo $content['permalink'] ?>"><h3><?php echo $content['title']; ?></h3></a>
-                  <div class='line green'></div>
-                  <?php echo $content['body'];?>
-                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu sapien sagittis, tempus neque eget, commodo eros</p> -->
+            <?php if ( $the_query->have_posts() ) : ?>
+              <!-- the loop -->
+              <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                <div class='col-sm-4'>
+                  <a href="<?php the_permalink(); ?>">
+                  <div class='white eqheight'>
+                    <div class='container-block'>
+                      <?php the_title( '<h3>', '</h3>' ); ?>
+                      <div class='line green'></div>
+                        <?php the_excerpt(); ?>
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu sapien sagittis, tempus neque eget, commodo eros</p> -->
+                    </div>
+                  </div>
+                  </a>
                 </div>
-              </div>
-            </div>
-          <?php break;?>
-          <?php case 'twitter': ?>
-            <div class='col-sm-4'>
-              <div class='twitter-feed white eqheight' style="margin: 0">
-                <div class='container-block'>
-                  <h3>@<?php echo $content['title']; ?></h3>
-                  <div class='line green'></div>
-                  <p><?php echo $content['body'];?></p>
-                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu sapien sagittis, tempus neque eget, commodo eros</p> -->
-                </div>
-              </div>
-            </div>
-          <?php break;?>
-          <?php case 'instagram': ?>
-            <div class='col-sm-4'>
-              <div class='eqheight'>
-                <img src='<?php echo $content['body']['url'];?>'>
-                <div class='sprites badges instagram'></div>
-              </div>
-            </div>
-          <?php break;?>
-          <?php endswitch;?>
-          <?php endforeach; ?>
+              <?php endwhile; ?>
+              <!-- end of the loop -->
+
+              <?php wp_reset_postdata(); ?>
+
+            <?php else : ?>
+              <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+            <?php endif; ?>
           </div>
         </div>
       </div>
@@ -81,10 +71,10 @@ Template Name: Monthly Archive Template
       jQuery(".youtube-video").height(maxHeight);
   
     }
-    jQuery('.middle-section').jscroll({
-      padding: 5,
-      contentSelector: '.col-sm-4.eqheight',
-      debug: true
-    });
+    // jQuery('.middle-section').jscroll({
+    //   padding: 5,
+    //   contentSelector: '.col-sm-4.eqheight',
+    //   debug: true
+    // });
   });
 </script>

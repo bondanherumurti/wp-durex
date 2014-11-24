@@ -219,6 +219,13 @@ get_header(); ?>
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-xs-12 white">
+          <div class="container-block text-center">
+            <h4><a style="color:#ec3a6e; border-bottom: #5ddab0 solid 3px; text-transform: uppercase;" href="<?php  echo esc_url( get_permalink( get_page_by_title( 'Archive' ) ) ); ?>">View Archive</a></h4>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 <?php

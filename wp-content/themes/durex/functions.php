@@ -160,6 +160,9 @@ function set_body_id() {
 	if ( is_page_template( 'menurut-kamu.php' ) ) {
 		return "menurut_kamu";
 	}
+	if ( is_page_template( 'monthlyarchive.php' ) ) {
+		return "menurut_kamu";
+	}
 	if(is_page()){
 		return "page";
 	} 
