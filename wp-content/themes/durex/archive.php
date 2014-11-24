@@ -50,7 +50,7 @@ get_header(); ?>
 		    <ul class="months">
 		    <?php foreach ($months as $month => $posts ) { // iterates the moths ?>
 		      <li>
-		        <h4><?php printf("%s (%d)", $month, count($months[$month])) ?></h4>
+		        <h4><a href="#"><?php printf("%s (%d)", $month, count($months[$month])) ?></a></h4>
 
 		      </li>
 		    <?php } // ends foreach for $months ?>

@@ -5974,15 +5974,13 @@ ul.years, ul.months {
     ul.years li h3 {
       color: #ed2d66;
       text-align: left !important;
-      font-size: 40px;
+      font-size: 30px;
     }
 ul.months {
   padding: 5px;
   margin-left: -35px;
 }
   ul.months li {
-    display: inline-block;
-    width: 30%;
     padding: 10px;
   }
   ul.months li:nth-child(odd) {
@@ -5994,8 +5992,18 @@ ul.months {
     ul.months li h4 {
       color: #033b76;
       font-family: "proxima_nova_rgbold";
-      font-size: 28px;
+      font-size: 20px;
     }
+    ul.months li h4 a {
+      color: #033b76 !important;
+    }
+
+@media (min-width: 768px) {
+  ul.months li {
+    display: inline-block;
+    width: 33%;
+  }
+}
 #pengetahuan .top-section {
   background: url("assets/images/bg-pengetahuan.jpg");
   background-size: 100% 100%; }
