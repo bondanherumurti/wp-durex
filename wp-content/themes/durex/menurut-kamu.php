@@ -108,10 +108,10 @@ Template Name: Menurut Kamu Template
       jQuery(".youtube-video").height(maxHeight);
   
     }
-    jQuery('.middle-section').jscroll({
-      padding: 5,
-      contentSelector: '.col-sm-4.eqheight',
-      debug: true
-    });
+    // jQuery('.middle-section').jscroll({
+    //   padding: 5,
+    //   contentSelector: '.col-sm-4.eqheight',
+    //   debug: true
+    // });
   });
 </script>
