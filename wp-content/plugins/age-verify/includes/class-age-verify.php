@@ -251,7 +251,7 @@ final class Age_Verify {
 				
 				<p class = "bold">Someone Like Me adalah gerakan sosial berisikan diskusi tentang ancaman HIV/AIDs dan isu seksual lainnya. Gerakan sosial ini bertujuan untuk mengajak semua orang untuk tidak malu atau sungkan berdiskusi dengan terbuka, jujur dan tanpa saling menghakimi. </p>
 				
-				<p class="bold">Masukan tanggal ulang tahun kamu!</p>
+				<p class="bold">Masukan tanggal lahirmu</p>
 				<?php // if ( av_get_the_desc() )
 					//echo '<p>' . esc_html( av_get_the_desc() ). '</p>'; ?>
 				

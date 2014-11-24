@@ -5997,12 +5997,16 @@ ul.months {
     ul.months li h4 a {
       color: #033b76 !important;
     }
-
 @media (min-width: 768px) {
   ul.months li {
     display: inline-block;
     width: 33%;
   }
+#pengetahuan a:hover .container-block {
+  background-color: #000;
+  opacity: 0.5;
+  height: 100%;
+  color: #000;
 }
 #pengetahuan .top-section {
   background: url("assets/images/bg-pengetahuan.jpg");
@@ -6019,9 +6023,11 @@ ul.months {
 #pengetahuan .line.white-line {
   margin: 20px 0; }
 #pengetahuan .featured {
-  padding: 20px 0; 
   background: url("assets/images/bg-purple.jpg") no-repeat;
   background-size: 100%; }
+  #pengetahuan .featured .container-block {
+    padding: 20px 25px;
+  }
   #pengetahuan .featured h3 {
     text-align: center;
     color: #fff;
@@ -6061,6 +6067,9 @@ ul.months {
   color: inherit; }
   #menurut_kamu .middle-section a:hover {
     text-decoration: none; }
+#menurut_kamu .middle-section a:hover .white {
+  background: #f5f5f5;
+}
 #menurut_kamu .middle-section .white {
   padding-top: 0px;
   padding-bottom: 0px; }
