@@ -177,6 +177,7 @@ function mix_video_blog_instagram(){
           'field'    => 'slug',
           'terms'    => 'post-format-video',
           'order' => 'DESC',
+          'max_num_pages' => '8',
         )
       )
     );
@@ -185,10 +186,11 @@ function mix_video_blog_instagram(){
 		'category_name' => 'blogs',
 		'orderby' => 'post_date',
 		'order' => 'DESC',
+		'max_num_pages' => '8',
 		)
 	);
-	$instagram_contents = load_hashtag_instagram(-1);
-	$twitter_contents = load_hashtag_twitter(-1);
+	$instagram_contents = load_hashtag_instagram(8);
+	$twitter_contents = load_hashtag_twitter(8);
 
 	// dd($twitter_contents);
 	// d($instagram_contents);
