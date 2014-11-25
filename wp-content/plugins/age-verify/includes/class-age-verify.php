@@ -241,9 +241,9 @@ final class Age_Verify {
 		define( 'DONOTCACHEPAGE', true ); ?>
 		
 		<div id="av-overlay-wrap">
-			<img class="orang cowok hidden-xs" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/guy.png ?>">
-			<img class="orang cewek hidden-xs" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/girl.png ?>">
-			<img class="logo-age" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-age.png ?>">
+			<img class="orang cowok hidden-xs" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/guy.png">
+			<img class="orang cewek hidden-xs" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/girl.png">
+			<img class="logo-age" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-age.png">
 
 			<?php do_action( 'av_before_modal' ); ?>
 			
