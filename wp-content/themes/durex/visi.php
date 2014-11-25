@@ -91,6 +91,8 @@ Template Name: Visi Page
 <?php get_footer(); ?>
 <script>
   jQuery(window).load(function() {
+    if (jQuery(window).width() >= 768) {
+  
       var heights = jQuery(".eqheight").map(function() {
         return jQuery(this).height();
       }).get();
@@ -98,5 +100,7 @@ Template Name: Visi Page
 
       var maxHeight = Math.max.apply(null, heights);
       jQuery(".eqheight").height(maxHeight);
+  
+    }
   });
 </script>
