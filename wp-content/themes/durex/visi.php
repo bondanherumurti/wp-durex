@@ -36,10 +36,10 @@ Template Name: Visi Page
       <div class='middle-section'>
         <div class='container'>
           <div class='row'>
-            <div class='col-sm-8'>
-              <iframe allowfullscreen='' class='youtube-height' frameborder='0' src='<?php the_field('youtube_video')?>' width='100%'></iframe>
+            <div class='col-sm-8 eqheight'>
+              <div class="bg-spread"></div>
             </div>
-            <div class='col-sm-4'>
+            <div class='col-sm-4 eqheight'>
               <div class='bg-purple container-block text-center spread-height'>
                 <h3 class='white-text'>Spread the word</h3>
                 <div class='line pink'></div>
@@ -89,3 +89,14 @@ Template Name: Visi Page
         </div>
       </div>
 <?php get_footer(); ?>
+<script>
+  jQuery(window).load(function() {
+      var heights = jQuery(".eqheight").map(function() {
+        return jQuery(this).height();
+      }).get();
+      console.log(heights);
+
+      var maxHeight = Math.max.apply(null, heights);
+      jQuery(".eqheight").height(maxHeight);
+  });
+</script>
