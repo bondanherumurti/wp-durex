@@ -5779,6 +5779,12 @@ a:hover .someone-like-me {
   background-size: 100% 100%;
 }
 
+.bg-spread {
+  background: url("assets/images/img-visi.jpg") no-repeat;
+  background-size: auto 100%;
+  height: 100%;
+}
+
 .bg-purple {
   background: url("assets/images/bg-purple.jpg") no-repeat;
   background-size: 100% 100%;
@@ -6196,7 +6202,7 @@ ul.months {
     padding-top: 120px; }
 
   .bg-tongue {
-    min-height: 446px;
+    min-height: 389px;
     padding-bottom: 18px; }
 
   .col-xs-12.menu {
@@ -6268,7 +6274,7 @@ ul.months {
   .bg-tongue {
     padding-bottom: 49px;
     padding-top: 20px; 
-    min-height: 401px;
+    min-height: 353px;
   }
     .bg-tongue p {
       font-size: 15px;
@@ -6323,7 +6329,7 @@ ul.months {
     padding-bottom: 20px; }
 
   .bg-tongue {
-    min-height: 376px;
+    min-height: 317px;
   }
   .bg-tongue h3 {
     padding-bottom: 20px;
