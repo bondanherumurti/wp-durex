@@ -96,7 +96,7 @@ function load_hashtag_twitter($limit){
 	    }
 		}
 	// return array_slice(json_decode($result)->statuses, 0, 2);
-	return $limit != -1 ? array_slice(json_decode($result)->statuses, 0, 2) : json_decode($result)->statuses;
+	return $limit != -1 ? array_slice(json_decode($result)->statuses, 0, $limit) : json_decode($result)->statuses;
 }
 
 function set_class($image, $color){
