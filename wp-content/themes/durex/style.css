@@ -5662,8 +5662,12 @@ ul.social-media {
           padding-left: 0px; }
 
 .top-section {
-  background: url("assets/images/header.jpg");
-  background-size: 100% 100%; }
+  background: url("assets/images/header.jpg") no-repeat;
+  background-size: auto 100%; }
+@media (min-width: 768px) {
+  .top-section {
+    background-size: 100% 100%; }
+}
 
 .header {
   padding-top: 20px; }
@@ -5861,8 +5865,12 @@ a:hover .bg-knowledge {
     background-color: #ffffff; }
 
 #visi .top-section {
-  background: url("assets/images/bg-visi.jpg");
-  background-size: 100% 100%; }
+  background: url("assets/images/bg-visi.jpg") no-repeat;
+  background-size: auto 100%; }
+@media (min-width: 768px) {
+  #visi .top-section {
+    background-size: 100% 100%; }
+}
 #visi .line.green {
   margin: 20px 0; }
 #visi .content .container-block {
@@ -5891,8 +5899,12 @@ ul.share {
   background-size: 100% 100%; }
 
 #inner .top-section {
-  background: url("assets/images/bg-inner.jpg");
-  background-size: 100% 100%; }
+  background: url("assets/images/bg-inner.jpg") no-repeat;
+  background-size: auto 100%; }
+@media (min-width: 768px) {
+  #inner .top-section {
+    background-size: 100% 100%; }
+}
 #inner h1 {
   margin-top: 0; }
 #inner .col-md-8 {
@@ -5951,8 +5963,12 @@ ul.file-under {
       font-size: 15px; }
 
 #page .top-section {
-  background: url("assets/images/bg-privacy.jpg");
-  background-size: 100% 100%; }
+  background: url("assets/images/bg-privacy.jpg") no-repeat;
+  background-size: auto 100%; }
+@media (min-width: 768px) {
+  #page .top-section {
+    background-size: 100% 100%; }
+}
 #page .tagline {
   padding-top: 50px; }
   #page .tagline .line.pink {
@@ -6008,6 +6024,7 @@ ul.months {
     display: inline-block;
     width: 33%;
   }
+}
 #pengetahuan a:hover .container-block {
   background-color: #000;
   opacity: 0.5;
@@ -6015,8 +6032,12 @@ ul.months {
   color: #000;
 }
 #pengetahuan .top-section {
-  background: url("assets/images/bg-pengetahuan.jpg");
-  background-size: 100% 100%; }
+  background: url("assets/images/bg-pengetahuan.jpg") no-repeat;
+  background-size: auto 100%; }
+@media (min-width: 768px) {
+  #pengetahuan .top-section {
+    background-size: 100% 100%; }
+}
 #pengetahuan .someone-like-me {
   margin-top: 71px; }
 #pengetahuan .tagline {
@@ -6057,8 +6078,12 @@ ul.months {
 }
 
 #menurut_kamu .top-section {
-  background: url("assets/images/bg-menurut-kamu.jpg");
-  background-size: 100% 100%; }
+  background: url("assets/images/bg-menurut-kamu.jpg") no-repeat;
+  background-size: auto 100%; }
+@media (min-width: 768px) {
+  #menurut_kamu .top-section {
+    background-size: 100% 100%; }
+}
 #menurut_kamu .tagline {
   margin: 4px 0;
 }
@@ -6116,8 +6141,12 @@ ul.months {
         padding: 5px 12px; }
 
 #ayo_terlibat .top-section {
-  background: url("assets/images/bg-ayo-terlibat.jpg");
-  background-size: 100% 100%; }
+  background: url("assets/images/bg-ayo-terlibat.jpg") no-repeat;
+  background-size: auto 100%; }
+@media (min-width: 768px) {
+  #ayo_terlibat .top-section {
+    background-size: 100% 100%; }
+}
 #ayo_terlibat .bg-purple {
   padding-top: 0;
   padding-bottom: 20px; }
