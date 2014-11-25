@@ -65,21 +65,21 @@ Template Name: Visi Page
           </div>
           <div class='row content'>
             <div class='col-sm-4'>
-              <div class='white container-block first-height'>
+              <div class='white container-block eqheight2'>
                 <h3><?php the_field('blok_1_header'); ?></h3>
                 <div class='line green'></div>
                 <?php the_field('blok_1_intro'); ?>
               </div>
             </div>
             <div class='col-sm-4'>
-              <div class='blue-sky container-block second-height'>
+              <div class='blue-sky container-block eqheight2'>
                 <h3><?php the_field('blok_2_header'); ?></h3>
                 <div class='line green'></div>
                 <?php the_field('blok_2_intro'); ?>
               </div>
             </div>
             <div class='col-sm-4'>
-              <div class='white container-block third-height'>
+              <div class='white container-block eqheight2'>
                 <h3><?php the_field('blok_3_header'); ?></h3>
                 <div class='line green'></div>
                 <?php the_field('blok_3_intro'); ?>
@@ -92,14 +92,19 @@ Template Name: Visi Page
 <script>
   jQuery(window).load(function() {
     if (jQuery(window).width() >= 768) {
-  
       var heights = jQuery(".eqheight").map(function() {
         return jQuery(this).height();
       }).get();
-      console.log(heights);
 
       var maxHeight = Math.max.apply(null, heights);
       jQuery(".eqheight").height(maxHeight);
+
+      var heights2 = jQuery(".eqheight2").map(function() {
+        return jQuery(this).height();
+      }).get();
+
+      var maxHeight2 = Math.max.apply(null, heights2);
+      jQuery(".eqheight2").height(maxHeight2);
   
     }
   });
