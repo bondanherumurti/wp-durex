@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
-    <title>Durex</title>
+    <title>Someone Like Me : Dare to Speak Up, Dare to Understand, Dare to Take Action | An Initiaive by Durex</title>
     <!-- Bootstrap -->
     <link href='<?php echo get_stylesheet_directory_uri(); ?>/style.css' rel='stylesheet'>
     <link href='<?php echo get_stylesheet_directory_uri(); ?>/assets/fonts/font.css' rel='stylesheet'>
